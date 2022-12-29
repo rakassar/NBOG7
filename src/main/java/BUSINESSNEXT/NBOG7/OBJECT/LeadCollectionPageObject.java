@@ -4,16 +4,194 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CollectDocsLeadPageObject extends LoginPageObject{
+public class LeadCollectionPageObject extends LoginPageObject{
 
-public CollectDocsLeadPageObject (WebDriver driver)
+public LeadCollectionPageObject (WebDriver driver)
 
 {
 	super(driver);
 
 }
 
+//NBO
+@FindBy(name="cust_1902")
+public static WebElement sel_ldSalutation;
 
+@FindBy(name="cust_1901")
+public static WebElement ent_ldcustomerName;
+
+
+@FindBy(xpath="//input[@data-autoid = 'cust_580_ctrl']")
+public static WebElement ent_ldDateofBirth;
+
+@FindBy(name="cust_441")
+public static WebElement ent_ldldCardNo;
+
+@FindBy(xpath="//input[@data-autoid = 'cust_582_ctrl']")
+public static WebElement ent_ldIDCardExpiry;
+
+@FindBy(name="cust_583")
+public static WebElement sel_ldEmployerType;
+
+
+@FindBy(name="cust_1801")
+public static WebElement pic_ldSub_Industry;
+
+
+@FindBy(name="cust_112473")
+public static WebElement pic_ldNatureOfBusiness;
+
+@FindBy(name="cust_592")
+public static WebElement pic_ldCustomerProfession;
+
+@FindBy(name="LE_PRODUCT")
+public static WebElement sel_ldAccountType;
+
+@FindBy(name="cust_1266")
+public static WebElement ent_AccountShortName;
+
+@FindBy(xpath="//a[@data-autoid='cust_125310_srch']")
+public static WebElement clk_PSpicker;
+
+
+@FindBy(name="Grid_SearchTextBox")
+public static WebElement ent_ldPSsearchBox;
+
+
+@FindBy(xpath="//div[@data-autoid='Product_type_name_0']")
+public static WebElement clk_ldPSproductselect;
+
+@FindBy(name="LE_MOBILE")
+public static WebElement ent_ldMobile;
+
+@FindBy(name="cust_667")
+public static WebElement sel_ldLiteracy;
+
+@FindBy(name="LE_LEADSOURCE")
+public static WebElement sel_ldLeadSource;
+
+@FindBy(xpath="//a[@data-autoid='cust_1001_srch']")
+public static WebElement clk_PApicker;
+
+@FindBy(xpath="//label[@for='checkbox3']")
+public static WebElement clk_ldcheckboxLoanPayment;
+
+@FindBy(name="//button[normalize-space()='Ok']")
+public static WebElement clk_ldOKbutton;
+
+@FindBy(xpath="//a[@data-autoid='cust_3017_srch']")
+public static WebElement clk_staffCodepicker;
+
+@FindBy(xpath="//div[@data-autoid='con_ex1_6_0']")
+public static WebElement clk_staffcode;
+
+@FindBy(xpath="//a[@data-autoid='cust_125120_srch']")
+public static WebElement clk_PEPpicker;
+
+@FindBy(xpath="//div[@data-autoid='PEP_Status_Type_0']")
+public static WebElement clk_ldPEPStatusselect;
+
+@FindBy(xpath="//a[@data-autoid='cust_123350_srch']")
+public static WebElement clk_screeningMatchespicker;
+
+@FindBy(xpath="//div[@data-autoid='Value_0']")
+public static WebElement clk_ldScreeningvalueselect;
+
+@FindBy(name="cust_24202")
+public static WebElement sel_ldHNWIStatus;
+
+@FindBy(name="cust_125060")
+public static WebElement sel_ldCaptureAssociateParty;
+
+@FindBy(name="cust_51")
+public static WebElement ent_ldSurname;
+
+@FindBy(name="cust_1788")
+public static WebElement ent_ldvillano;
+
+@FindBy(name="cust_24435")
+public static WebElement sel_ldresidenceStatus;
+
+@FindBy(name="cust_785")
+public static WebElement ent_ldwayno;
+
+@FindBy(name="cust_1787")
+public static WebElement ent_ldbuildingno;
+
+@FindBy(name="cust_1860")
+public static WebElement pic_ldLocation;
+
+@FindBy(name="cust_979")
+public static WebElement pic_ldPOCode;
+
+@FindBy(name="cust_147")
+public static WebElement ent_ldPOBox;
+
+
+@FindBy(xpath="//a[@data-autoid='cust_125130_srch']")
+public static WebElement clk_ldAETVpicker;
+
+
+@FindBy(xpath="//a[@data-autoid='cust_125132_srch']")
+public static WebElement clk_ldRSMpicker;
+
+
+@FindBy(xpath="//div[@data-autoid='Sourcing_Channel_Code_0']")
+public static WebElement clk_ldSourcingcode;
+
+
+@FindBy(xpath="//a[@data-autoid='cust_122834_srch']")
+public static WebElement clk_ldOriginCountry1;
+
+
+@FindBy(xpath="//div[@data-autoid='Country_Name_0']")
+public static WebElement clk_ldOriginCountry1name;
+
+@FindBy(xpath="//a[@data-autoid='cust_122835_srch']")
+public static WebElement clk_ldDestinationCountry1;
+
+
+@FindBy(xpath="//a[@data-autoid='cust_125309_srch']")
+public static WebElement clk_ldSourceOfFunds;
+
+
+@FindBy(xpath="//div[@data-autoid='Source_of_Funds_Name_0']")
+public static WebElement clk_ldSourceoffundSelect;
+
+
+@FindBy(xpath="//input[@data-autoid='cust_624_ctrl']")
+public static WebElement ent_ldMonthlyIncome;
+
+
+@FindBy(name="cust_975")
+public static WebElement ent_ldPlaceOfBirth;
+
+
+@FindBy(name="cust_658")
+public static WebElement pic_ldCountryOfBirth;
+
+
+@FindBy(name="cust_673")
+public static WebElement sel_ldgreencard;
+
+@FindBy(name="cust_677")
+public static WebElement sel_ldMakeOngoingPayment;
+
+@FindBy(name="cust_1635")
+public static WebElement sel_ldUSTax;
+
+@FindBy(name="cust_695")
+public static WebElement sel_ldUSCitizen;
+
+@FindBy(name="cust_674")
+public static WebElement sel_ldUSpassHolder;
+
+
+
+
+
+
+//NBO
 //Fill the all text box type info//
 @FindBy(className="icon-edit")
 public static WebElement clk_ldNewLeadEdit;

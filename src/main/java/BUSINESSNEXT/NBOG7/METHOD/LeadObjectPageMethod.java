@@ -82,13 +82,19 @@ public class LeadObjectPageMethod extends HomePageMethod{
 
 	  LeadObjectPageObject.clk_saveandproceed.click();
  	}
-   public void ClickOnCRRSCtab()
+   public void ClickOnRetailOnboarding()
 
 	{
-	   LeadObjectPageObject.clk_CRRSCtab.click();
+	   LeadObjectPageObject.clk_retailOnboardingOman.click();
 
 	}
+   public void ClickOnboardCustomer()
 
+ 	{
+	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+
+	   LeadObjectPageObject.clk_OnboardCustomer.click();
+ 	}
    public void ClickOnAddresstab()
 
 	{
@@ -154,9 +160,7 @@ public void ClickOnActivitiestab()
        Set<String> multiplewindows=driver.getWindowHandles();
        Iterator<String> iterator = multiplewindows.iterator();
        String mainWindow = iterator.next();
-       System.out.println("Main Window"+mainWindow);
        String ChildWindow = iterator.next();
-       System.out.println("Child Window"+ ChildWindow);
        driver.switchTo().window(ChildWindow);
 
    }

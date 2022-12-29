@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="BUSINESSNEXT.NBOG7.TESTSCENARIOS.SC_001_Lead_NTBLeadCreation">
+      <class name="BUSINESSNEXT.NBOG7.TESTSCENARIOS.SC_001_Lead_RetailJourneyLow">
         <methods>
           <include name="SC_001_TC_001"/>
         </methods>
-      </class> <!-- BUSINESSNEXT.NBOG7.TESTSCENARIOS.SC_001_Lead_NTBLeadCreation -->
+      </class> <!-- BUSINESSNEXT.NBOG7.TESTSCENARIOS.SC_001_Lead_RetailJourneyLow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

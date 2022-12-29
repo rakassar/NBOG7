@@ -10,11 +10,10 @@ import BUSINESSNEXT.NBOG7.OBJECT.*;
 public class HomePageMethod extends LoginPageMethod{
 
 	//quick link and sales widget
-   public void ClickOnsaleswidget()
+   public void ClickOnLeadswidget()
 
 	{
-		Actions quick = new Actions(driver);
-		quick.moveToElement(HomePageObject.clk_leadpanesaleswidget).perform();
+	HomePageObject.clk_leadpanesaleswidget.click();;
 
 	}
 
@@ -34,14 +33,7 @@ public class HomePageMethod extends LoginPageMethod{
 
 
 
- //quick link and sales journey option
-   public void ClickOnsalesJouney()
-
-  	{
-	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
-
-	   HomePageObject.clk_leadpanesalesjourney.click();
-  	}
+ 
 
 
    public void ClickOnLoanJouney()
