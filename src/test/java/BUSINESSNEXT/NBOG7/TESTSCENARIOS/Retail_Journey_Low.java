@@ -14,22 +14,19 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-
-
-
+import BUSINESSNEXT.SBCGOLD8.REPOSITORY.*;
+import BUSINESSNEXT.NBOG7.COMMON.*;
+import BUSINESSNEXT.NBOG7.METHOD.*;
+import BUSINESSNEXT.NBOG7.OBJECT.*;
+@Test
 ///Retail_Lead_Journey_(Low)
-public class Retail_Journey_Low  {
+public class Retail_Journey_Low  implements Properties {
 
-
-//
-	@Test
-	//public static void main(String[] args) throws InterruptedException
-	public void demo() throws InterruptedException{
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-
- System.setProperty("webdriver.chrome.driver","D:\\Rizwan\\Automation\\lib\\chromedriver.exe");
-//		 System.setProperty("webdriver.chrome.driver","D:\\Rizwan\\Automation\\lib\\Latest Chrome Driver\\chromedriver.exe");
-
+		
+		 System.setProperty("webdriver.chrome.driver",ChromeDriverPath);
+         
 	        ChromeDriver driver = new ChromeDriver();
 	        driver.get("https://nbodev.crmnext.com/prodsanew/app/login/login"); //Access URL
 	        driver.manage().window().maximize(); // Maximize window
@@ -68,24 +65,24 @@ public class Retail_Journey_Low  {
 	   driver.findElement(By.xpath("//*[@id=\"newobject\"]/div/div[2]/div/div/div/div/div[2]/div/div[1]/div/div[2]/div[5]/div[2]/div/div/div/div/input")).sendKeys("14/10/2222");//ID Card Expiry Date
 	   //driver.findElement(By.xpath("//a[@data-autoid='cust_125310_srch']")).click();
 	        //driver.findElement(By.xpath("//a[@data-autoid='cust_1902_ctrl']")).click();
-
-	String MainWindow=driver.getWindowHandle();
-
-	        // To handle all new opened window.
-	            Set<String> s1=driver.getWindowHandles();
-	        Iterator<String> i1=s1.iterator();
-
-
-	            String ChildWindow=i1.next();
-
-
-
+	        
+	String MainWindow=driver.getWindowHandle();        
+	        
+	        // To handle all new opened window.                
+	            Set<String> s1=driver.getWindowHandles();        
+	        Iterator<String> i1=s1.iterator();        
+	                
+	             
+	            String ChildWindow=i1.next();        
+	                    
+	                        
+	                 
 	                    // Switching to Child window
-	                    driver.switchTo().window(ChildWindow);
-	                    Thread.sleep(1000);
+	                    driver.switchTo().window(ChildWindow);         
+	                    Thread.sleep(1000);    
 	                  //  driver.findElement(By.xpath("//*[@data-autoid='cust_1902_ctrl']")).click();
-
-
+	           
+	        
 	        Select bucket2 = new Select (driver.findElement(By.xpath("//select[@name='cust_1902']")));
 	        //System.out.println("bucket2");
 	       // Select bucket2 = new Select(driver.findElement(By.xpath("//*[@data-autoid='cust_1902_ctrl']")));
@@ -126,7 +123,7 @@ public class Retail_Journey_Low  {
 	        driver.findElement(By.name("LE_MOBILE")).sendKeys("9278778787");//Mobile number
 	        driver.findElement(By.name("cust_1266")).sendKeys("vin");//Account short name
 	        Thread.sleep(1000);
-
+	        
 	        //driver.findElement(By.xpath("//input[@name='cust_625']").sendKeys("1550");//Other Income
 	        driver.findElement(By.xpath("//input[@data-autoid='cust_624_ctrl']")).sendKeys("987654");
 	      //  driver.findElement(By.xpath("//input[@name='cust_625']")).sendKeys("56789");//Other Income
@@ -142,24 +139,24 @@ public class Retail_Journey_Low  {
 	        Thread.sleep(3000);
 	      //  driver.findElement(By.xpath("//i[@class='icon icon-arrow-right2']")).click();
 	        driver.findElement(By.xpath("//div[@title='Loans and Advances']")).click(); // Cards
-
+	        
 	        Thread.sleep(3000);
-
-
-
+	        
+	        
+	        
 	        WebElement Location=driver.findElement(By.name("cust_1860"));
 	        Location .sendKeys("CCAE-MUSCAT");
 	        Thread.sleep(2000);
 	        Location.sendKeys(Keys.DOWN);
 	        Thread.sleep(1000);
 	        Location.sendKeys(Keys.ENTER);
-
-
+	      
+	        
 	        Thread.sleep(1000);
-
-
-
-
+	        
+	        
+	        
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_1419_srch']")).click();//Employer
 	        Thread.sleep(1000);
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("007"); //Employer
@@ -167,10 +164,10 @@ public class Retail_Journey_Low  {
 	     //  driver.findElement(By.xpath("//i[@class='icon icon-arrow-right2']")).click();
 	        driver.findElement(By.xpath("//div[@title='007']")).click(); //Employer
 	        Thread.sleep(1000);
-
-
-
-
+	        
+	        
+	        
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_635_srch']")).click();//Designation
 	        Thread.sleep(1000);
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("D001-General Manager"); //Designation
@@ -178,11 +175,11 @@ public class Retail_Journey_Low  {
 	     //  driver.findElement(By.xpath("//i[@class='icon icon-arrow-right2']")).click();
 	        driver.findElement(By.xpath("//div[@title='D001-General Manager']")).click(); //Designation
 	        Thread.sleep(1000);
-
-
-
-
-
+	        
+	        
+	        
+	        
+	               
 	        Thread.sleep(1000);
 	        //WebElement Location11=driver.findElement(By.name("cust_1800"));
 	        //Location11 .sendKeys("Accommodation");
@@ -190,8 +187,8 @@ public class Retail_Journey_Low  {
 	       // Location11.sendKeys(Keys.DOWN);
 	        //Location11.sendKeys(Keys.ENTER);
 	        //Thread.sleep(1000);
-
-
+	        
+	        
 //	        driver.findElement(By.xpath("//a[@data-autoid='cust_1801_srch']")).click();//Sub industry
 	        Thread.sleep(1000);
 //	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("Abrasive product manufacturing"); //Sub industry
@@ -199,23 +196,23 @@ public class Retail_Journey_Low  {
 	       //driver.findElement(By.xpath("//i[@class='icon icon-arrow-right2']")).click();
 //	        driver.findElement(By.xpath("//div[@title='Abrasive product manufacturing']")).click(); //Sub industry
 	        Thread.sleep(1000);
-
-
-	        JavascriptExecutor js = driver;
+	             
+	        
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	        js.executeScript("window.scrollBy(0,5000)","" );
-
-
+	        
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_1001_srch']")).click();//Purpose of Account
 	        Thread.sleep(1000);
 	        driver.findElement(By.xpath("//label[@for='checkbox3']")).click();//Purpose of Account
 	        Thread.sleep(1000);
 	//       driver.findElement(By.xpath("//i[@class='icon icon-arrow-right2']")).click();
 	        driver.findElement(By.xpath("//button[normalize-space()='Ok']")).click();//Purpose of Account
-
-	        JavascriptExecutor js1 = driver;
+	        
+	        JavascriptExecutor js1 = (JavascriptExecutor) driver;
 	        js1.executeScript("window.scrollBy(0,5000)","" );
-
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_123350_srch']")).click(); //Screening Matches
 	        Thread.sleep(1000);
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("Positive Match (no Financial Crime negative news)"); //Screening Matches
@@ -229,16 +226,16 @@ public class Retail_Journey_Low  {
 	        Thread.sleep(1000);
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("Not Applicable"); //PEP Status
 	        Thread.sleep(1000);
-
+	        
 	      //  driver.findElement(By.xpath("//i[@class='icon icon-arrow-right2']")).click();
 	        driver.findElement(By.xpath("//div[@title='Not Applicable']")).click(); //PEP Status
 	        Thread.sleep(1000);
-
-
-
-	        JavascriptExecutor js11 = driver;
+	        
+	        
+	        
+	        JavascriptExecutor js11 = (JavascriptExecutor) driver;
 	        js11.executeScript("window.scrollBy(0,5000)","" );
-
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_979_srch']")).click();//PO CODE
 	        Thread.sleep(1000);
 	 //       driver.findElement(By.xpath("//label[@for='checkbox1']")).click();//PO CODE
@@ -247,8 +244,8 @@ public class Retail_Journey_Low  {
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("101 - City Center MUSCAT");
 	        driver.findElement(By.xpath("//div[@title='101 - City Center MUSCAT']")).click();//PO CODE
 	        Thread.sleep(1000);
-
-
+	        
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_125130_srch']")).click();//Average Expected Transaction Value Per Annum
 	        Thread.sleep(1000);
 	 //       driver.findElement(By.xpath("//label[@for='checkbox1']")).click();//PO CODE
@@ -257,8 +254,8 @@ public class Retail_Journey_Low  {
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("Upto OMR 25k");
 	        driver.findElement(By.xpath("//div[@title='Upto OMR 25k']")).click();//Average Expected Transaction Value Per Annum
 	        Thread.sleep(1000);
-
-
+	        
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_122834_srch']")).click();//Origin Country of Funds - Country 1
 	        Thread.sleep(1000);
 	 //       driver.findElement(By.xpath("//label[@for='checkbox1']")).click();//PO CODE
@@ -267,7 +264,7 @@ public class Retail_Journey_Low  {
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("American Samoa");
 	        driver.findElement(By.xpath("//div[@title='American Samoa']")).click();//Origin Country of Funds - Country 1
 	        Thread.sleep(1000);
-
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_125132_srch']")).click();//Relationship and Servicing Method
 	        Thread.sleep(1000);
 	 //       Thread.sleep(1000);
@@ -276,8 +273,8 @@ public class Retail_Journey_Low  {
 	        Thread.sleep(2000);
 	        driver.findElement(By.xpath("//div[@title='Face-to-Face Channel (via Branch)']")).click();//Relationship and Servicing Method
 	        Thread.sleep(1000);
-
-
+	        
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_122835_srch']")).click();//Destination Country of Funds - Country 1
 	        Thread.sleep(1000);
 	 //       Thread.sleep(1000);
@@ -285,8 +282,8 @@ public class Retail_Journey_Low  {
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("American Samoa");
 	        driver.findElement(By.xpath("//div[@title='American Samoa']")).click();//Destination Country of Funds - Country 1
 	        Thread.sleep(1000);
-
-
+	        
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_125309_srch']")).click();//Source of funds & wealth
 	        Thread.sleep(1000);
 	 //       Thread.sleep(1000);
@@ -294,7 +291,7 @@ public class Retail_Journey_Low  {
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("Government Aid");
 	        driver.findElement(By.xpath("//div[@title='Government Aid']")).click();//Source of funds & wealth
 	        Thread.sleep(1000);
-
+	        
 	        driver.findElement(By.xpath("//a[@data-autoid='cust_592_srch']")).click();//Customer Profession
 	        Thread.sleep(1000);
 	 //       Thread.sleep(1000);
@@ -302,36 +299,36 @@ public class Retail_Journey_Low  {
 	        driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("Actor");
 	        driver.findElement(By.xpath("//div[@title='Actor']")).click();//Customer profession
 	        Thread.sleep(3000);
-
+	        
 	   //     driver.findElement(By.xpath("//a[@data-autoid='cust_658_srch']")).click();//Country of birth
 	        Thread.sleep(2000);
 	 //       Thread.sleep(1000);
 	     //  driver.findElement(By.xpath("//i[@class='icon icon-arrow-right2']")).click();
 	       // driver.findElement(By.xpath("//input[@name='Grid_SearchTextBox']")).sendKeys("AMERICAN SAMOA");
-
+	        
 	  //      driver.findElement(By.xpath("//input[@data-autoid='cust_658_ctrl']")).sendKeys("AMERICAN SAMOA");
 	  //      Thread.sleep(2000);
 	  //      driver.findElement(By.xpath("//div[@data-autoid='AMERICAN SAMOA']")).click();//Country of birth
 	  //      Thread.sleep(2000);
-
-
-
-
-
+	        
+	        
+	        
+	        
+	      
 	        WebElement Location111=driver.findElement(By.name("cust_658"));
 	        Location111 .sendKeys("AMERICAN SAMOA");
 	        Thread.sleep(2000);
 	        Location111.sendKeys(Keys.DOWN);
 	        Location111.sendKeys(Keys.ENTER);
-
-
-
+	       
+	        
+	        
 	        //driver.findElement(By.xpath("//a[@data-autoid='cust_592_srch']")).click();//Click on Product
 	        //driver.findElement(By.name("Grid_SearchTextBox")).click();
-	        //driver.findElement(By.name("Grid_SearchTextBox")).sendKeys("Krungsri Visa Signature");//(For Specific product)
+	        //driver.findElement(By.name("Grid_SearchTextBox")).sendKeys("Krungsri Visa Signature");//(For Specific product)      
 	        //driver.findElement(By.xpath("//div[@data-autoid='DisplayName_0']")).click();//selection of product
 	        //driver.findElement(By.xpath("//a[@data-autoid='FlowNext']")).click();//click on save Button
-
+	        
 	        Thread.sleep(1000);
 	     //   WebElement Location1111=driver.findElement(By.name("cust_1799"));
 	      //  Location1111 .sendKeys("Aerospace");
@@ -339,20 +336,20 @@ public class Retail_Journey_Low  {
 	      //  Location1111.sendKeys(Keys.DOWN);
 	      //  Location1111.sendKeys(Keys.ENTER);
 	      //  Thread.sleep(1000);
-
-
-
+	                   
+	        
+	        
 	        Select cust_675 = new Select(driver.findElement(By.name("cust_24202")));//Multiple Nationality
 	        cust_675.selectByVisibleText("No");
 	        Thread.sleep(1000);
 	       // Thread.sleep(1000);
-
+	        
 	        driver.findElement(By.className("acd-btn--brand")).click();
-
+	        
 	        Thread.sleep(30000);
-
+	        
 	        //CRS
-
+	        
 	        Select cust_123396 = new Select(driver.findElement(By.name("cust_123396")));//Care of Address Applicable
 	        cust_123396.selectByVisibleText("No");
 	        Select cust_123394 = new Select(driver.findElement(By.name("cust_123394")));//Self-Certification Required
@@ -382,15 +379,15 @@ public class Retail_Journey_Low  {
 	       // driver.findElement(By.className("acd-btn--brand mh-8")).click();
 	        driver.findElement(By.linkText("Next")).click();
 	        Thread.sleep(60000);
-
+	        
 	        driver.findElement(By.xpath("//div[@class='acid-btn acid-btn--brand']")).click();
-
-
+	        
+	        
 	        Thread.sleep(60000);
 	        driver.findElement(By.xpath("//a[@data-autoid='FlowNext']")).click();
-
+	        
 	        //Login via checker for further process
-
+	        
 	        driver.findElement(By.xpath("//*[@id=\"TxtName\"]")).sendKeys("014517");  //Enter user name
 	        driver.findElement(By.xpath("//*[@id=\"TxtPassword\"]")).sendKeys("acid_qa"); // Enter Password
 	        driver.findElement(By.xpath("//*[@id=\"registration\"]/input")).click();  //Click on login button
@@ -406,22 +403,22 @@ public class Retail_Journey_Low  {
 	        System.out.println("Open A/C Verification Pending Retail");
 	        driver.findElement(By.xpath("//a[@class='filterGroup__button acid-btn acid-btn--outline-brand']")).click(); //View can not run automatically first time.
 	        Thread.sleep(2000);
-
+	        
 	        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-
+	        
 	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//label[contains(@for,'checkbox0')]")));
 
-
-
-
+	        
+	        
+	        
 	        driver.findElement(By.xpath("//label[contains(@for,'checkbox0')]")).click(); //Choose first  check box
 	        driver.findElement(By.xpath("//span[@class='acd-btn-circle__icon']")).click(); //Self Assigning lead
 	   //       wait.until(By.xpath(ChildWindow))
 	        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Ok']")));
 	        driver.findElement(By.xpath("//button[normalize-space()='Ok']")).click();//Click OK button for notification
 	     Thread.sleep(1000);
-
-
+	        
+	     
 	     wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("QueryViewId")));
 
 	     Select QueryViewId11 = new Select(driver.findElement(By.name("QueryViewId")));//CRAM Retail Leads Assigned To Me
@@ -436,12 +433,12 @@ public class Retail_Journey_Low  {
 	     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Ok']")));
 	     driver.findElement(By.xpath("//button[normalize-space()='Ok']")).click();//Click on ok button post AML Verification
 	     //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Ok']")));
-
+	     
 	    // Generate CIF
-
+	     
 	     driver.findElement(By.xpath("//div[@title='click here to see more actions']")).click();//Click on Custom Action Button
 	     driver.findElement(By.xpath("//span[@class='primary f12 ph-12 truncate ff-medium acd-link-text'][normalize-space()='Generate CIF']")).click();  //Click on Generate CIF button
-
+	 	
 	     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Ok']")));
 	     driver.findElement(By.xpath("//button[normalize-space()='Ok']")).click();//Click on OK Button
 
