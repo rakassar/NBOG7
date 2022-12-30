@@ -14,6 +14,10 @@ public LeadObjectPageObject (WebDriver driver)
 }
 
 
+@FindBy(xpath="//i[@title='On board Customer']")
+public static WebElement clk_OnboardCustomer ;
+
+
 @FindBy(xpath="//div[contains(@class,'form-element__control')]//div/span[contains(@data-autoid,'LE_NUMBER_ctrl')]")
 public static WebElement get_leadIDCreated ;
 
@@ -31,8 +35,8 @@ public static WebElement get_leadIDCreated ;
 		@FindBy(xpath="//button[normalize-space()='Ok']")
 		public static WebElement clk_closeProcessApplicationPopup;
 
-		@FindBy(xpath="//span[@title = 'CRRSC']")
-		 public static WebElement clk_CRRSCtab ;
+		@FindBy(xpath="(//a[@id ='1'])[3]")
+		 public static WebElement clk_retailOnboardingOman ;
 
 		@FindBy(xpath="//span[@title = 'Address']")
 		 public static WebElement clk_Addresstab ;
@@ -57,7 +61,7 @@ public static WebElement get_leadIDCreated ;
 	     @FindBy(css="[data-autoid='LeadID_0']")
 	     public static WebElement clk_selectthelead ;
 
-	     @FindBy(xpath="//i[@title='Self Assign']")
+	     @FindBy(xpath="//i[@title='CRAM Leads - Self Assign']")
 	     public static WebElement clk_selfassignlead ;
 
 

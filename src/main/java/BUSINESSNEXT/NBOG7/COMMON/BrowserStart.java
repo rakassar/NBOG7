@@ -32,7 +32,7 @@ public class BrowserStart implements Properties{
 	new CustomerSearchPageObject(driver);
 	new IndividualSalesJourneyPageObject(driver);
 	new CreateLeadAppointmentPageObject(driver);
-	new CollectDocsLeadPageObject(driver);
+	new LeadCollectionPageObject(driver);
 	new CustomerCareExecutiveObjects(driver);
 	new ExecutiveAssistantSalesObjects_ea_sales(driver);
 	new CRRSCLeadPageObject(driver);

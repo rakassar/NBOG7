@@ -33,22 +33,22 @@ public class LeadObjectPageMethod extends HomePageMethod{
 	        Select bucket2 = new Select(LeadObjectPageObject.sel_leadView);
           bucket2.selectByVisibleText(Leadcategoryview);
 	}
+   
+   
+   
 
    public void selfassignlead(String Leadview) throws InterruptedException
 
 	{
 
-		    JavascriptExecutor js =(JavascriptExecutor)driver;
-		    js.executeScript("window.scrollBy(0,1100)", " ");
-		    Select View = new Select(LeadObjectPageObject.clk_selectview);
-		    View.selectByVisibleText(Leadview);
-		    Thread.sleep(1000);
-		    LeadObjectPageObject.clk_arrorw.click();
+		    
+		    leadview(Leadview);
+		    
 		    Thread.sleep(1000);
 		    LeadObjectPageObject.clk_selectlead.click();
 			Thread.sleep(1000);
 			LeadObjectPageObject.clk_selfassignlead.click();
-		    Thread.sleep(1000);
+		    Thread.sleep(3000);
 			LeadObjectPageObject.clk_closeProcessApplicationPopup.click();
 
 		    Thread.sleep(1000);
@@ -58,12 +58,11 @@ public class LeadObjectPageMethod extends HomePageMethod{
 		    public void leadview(String leadview) throws InterruptedException
 
 			{
-				    JavascriptExecutor js =(JavascriptExecutor)driver;
-				    js.executeScript("window.scrollBy(0,1100)", " ");
+				    
 				    Select View = new Select(LeadObjectPageObject.clk_selectview);
 				    View.selectByVisibleText(leadview);
-				    Thread.sleep(1000);
-				    LeadObjectPageObject.clk_arrorw.click();
+				    Thread.sleep(2000);
+				    
 			}
 
 
@@ -82,13 +81,19 @@ public class LeadObjectPageMethod extends HomePageMethod{
 
 	  LeadObjectPageObject.clk_saveandproceed.click();
  	}
-   public void ClickOnCRRSCtab()
+   public void ClickOnRetailOnboarding()
 
 	{
-	   LeadObjectPageObject.clk_CRRSCtab.click();
+	   LeadObjectPageObject.clk_retailOnboardingOman.click();
 
 	}
+   public void ClickOnboardCustomer()
 
+ 	{
+	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+
+	   LeadObjectPageObject.clk_OnboardCustomer.click();
+ 	}
    public void ClickOnAddresstab()
 
 	{
@@ -154,9 +159,7 @@ public void ClickOnActivitiestab()
        Set<String> multiplewindows=driver.getWindowHandles();
        Iterator<String> iterator = multiplewindows.iterator();
        String mainWindow = iterator.next();
-       System.out.println("Main Window"+mainWindow);
        String ChildWindow = iterator.next();
-       System.out.println("Child Window"+ ChildWindow);
        driver.switchTo().window(ChildWindow);
 
    }
