@@ -33,22 +33,22 @@ public class LeadObjectPageMethod extends HomePageMethod{
 	        Select bucket2 = new Select(LeadObjectPageObject.sel_leadView);
           bucket2.selectByVisibleText(Leadcategoryview);
 	}
+   
+   
+   
 
    public void selfassignlead(String Leadview) throws InterruptedException
 
 	{
 
-		    JavascriptExecutor js =(JavascriptExecutor)driver;
-		    js.executeScript("window.scrollBy(0,1100)", " ");
-		    Select View = new Select(LeadObjectPageObject.clk_selectview);
-		    View.selectByVisibleText(Leadview);
-		    Thread.sleep(1000);
-		    LeadObjectPageObject.clk_arrorw.click();
+		    
+		    leadview(Leadview);
+		    
 		    Thread.sleep(1000);
 		    LeadObjectPageObject.clk_selectlead.click();
 			Thread.sleep(1000);
 			LeadObjectPageObject.clk_selfassignlead.click();
-		    Thread.sleep(1000);
+		    Thread.sleep(3000);
 			LeadObjectPageObject.clk_closeProcessApplicationPopup.click();
 
 		    Thread.sleep(1000);
@@ -58,12 +58,11 @@ public class LeadObjectPageMethod extends HomePageMethod{
 		    public void leadview(String leadview) throws InterruptedException
 
 			{
-				    JavascriptExecutor js =(JavascriptExecutor)driver;
-				    js.executeScript("window.scrollBy(0,1100)", " ");
+				    
 				    Select View = new Select(LeadObjectPageObject.clk_selectview);
 				    View.selectByVisibleText(leadview);
-				    Thread.sleep(1000);
-				    LeadObjectPageObject.clk_arrorw.click();
+				    Thread.sleep(2000);
+				    
 			}
 
 

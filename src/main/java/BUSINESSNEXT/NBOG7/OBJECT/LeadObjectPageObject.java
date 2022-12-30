@@ -61,7 +61,7 @@ public static WebElement get_leadIDCreated ;
 	     @FindBy(css="[data-autoid='LeadID_0']")
 	     public static WebElement clk_selectthelead ;
 
-	     @FindBy(xpath="//i[@title='Self Assign']")
+	     @FindBy(xpath="//i[@title='CRAM Leads - Self Assign']")
 	     public static WebElement clk_selfassignlead ;
 
 
