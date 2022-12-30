@@ -13,18 +13,16 @@ public class HomePageObject extends LoginPageObject {
 	}
 
 	//---create lead
-     @FindBy(className="icon-link")
+     @FindBy(className="icon-obj6")
 	 public static WebElement clk_leadpanesaleswidget ;
 
-     @FindBy(xpath="//*[@id=\"QuickLinksDiv\"]/ul/li[4]/a")
-	 public static WebElement clk_leadpanesalesjourney ;
-
+   
 
      @FindBy(xpath="//span[text()='Loan Journey']")
 	 public static WebElement clk_leadpaneLoanJourney ;
 
 
-     @FindBy(className="icon icon-sales")
+     @FindBy(className="icon-sales")
      public static WebElement clk_salesObject;
 
      @FindBy(css="span[title='Leads']")
