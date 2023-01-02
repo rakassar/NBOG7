@@ -87,6 +87,12 @@ public class LeadObjectPageMethod extends HomePageMethod{
 	   LeadObjectPageObject.clk_retailOnboardingOman.click();
 
 	}
+   public void ClickOnCorporateOnboarding()
+
+	{
+	   LeadObjectPageObject.clk_corporateOnboardingOman.click();
+
+	}
    public void ClickOnboardCustomer()
 
  	{
