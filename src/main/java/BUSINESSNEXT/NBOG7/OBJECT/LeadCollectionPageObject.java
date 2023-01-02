@@ -115,6 +115,9 @@ public static WebElement clk_staffcode;
 @FindBy(xpath="//a[@data-autoid='cust_125120_srch']")
 public static WebElement clk_PEPpicker;
 
+@FindBy(xpath="//a[@data-autoid='cust_125121_srch']")
+public static WebElement clk_PEPpickerCorporate;
+
 @FindBy(xpath="//div[@data-autoid='PEP_Status_Type_0']")
 public static WebElement clk_ldPEPStatusselect;
 
@@ -270,6 +273,9 @@ public static WebElement sel_ldcareOfAddress;
 @FindBy(name="cust_123394")
 public static WebElement sel_ldSelfCertification;
 
+@FindBy(name="cust_123410")
+public static WebElement sel_ldClassificationOfEntity;
+
 @FindBy(name="cust_123398")
 public static WebElement sel_ldstandingInstruction;
 
@@ -291,8 +297,15 @@ public static WebElement sel_ldHighValueRelation;
 @FindBy(name="cust_123405")
 public static WebElement sel_ldReportableAccount;
 
+
+@FindBy(name="cust_123411")
+public static WebElement sel_ldTypeOfCRS;
+
 @FindBy(name="cust_123403")
 public static WebElement sel_ldFlagForPre;
+
+@FindBy(name="cust_125590")
+public static WebElement sel_ldLegalIdentityType;
 
 @FindBy(xpath="//input[@data-autoid='cust_123401_ctrl']")
 public static WebElement ent_lddateOfCRS;
@@ -311,18 +324,40 @@ public static WebElement clk_ldIssuingCountry;
 @FindBy(xpath="//input[@data-autoid='cust_123415_ctrl']/following-sibling::div/a")
 public static WebElement clk_ldownershipDetailsupload;
 
+
+@FindBy(xpath="//input[@data-autoid='cust_123412_ctrl']/following-sibling::div/a")
+public static WebElement clk_ldActiveNfeForm;
+
+@FindBy(xpath="//input[@data-autoid='cust_271_ctrl']/following-sibling::div/a")
+public static WebElement clk_ldentityFormUploadupload;
+
 @FindBy(name="qqfile")
 public static WebElement clk_ldAttachmentField;
+
+@FindBy(name="cust_125591")
+public static WebElement ent_ldFinancialInstitution;
+
+@FindBy(name="cust_125592")
+public static WebElement clk_ldInvestmentEntity ;
 
 
 @FindBy(xpath="//a[@data-autoid ='Lay_118827']")
 public static WebElement clk_ldAddNewResidenct;
+
+@FindBy(xpath="//a[@data-autoid ='Lay_118828']")
+public static WebElement clk_ldAddNewResidenctCorporate;
+
+@FindBy(xpath="//a[@data-autoid ='Lay_117621']")
+public static WebElement clk_ldAddNewAuthorisedSignatory;
 
 @FindBy(xpath="//a[@data-autoid='cust_123385_srch']")
 public static WebElement pic_ldCountryOfTax;
 
 @FindBy(name="cust_123444")
 public static WebElement slk_ldTaxID;
+
+@FindBy(name="cust_125070")
+public static WebElement slk_ldAssociatedpartytype;
 
 
 @FindBy(name="cust_123443")
@@ -341,6 +376,20 @@ public static WebElement clk_ldAMLBtn;
 
 @FindBy(xpath="//span[normalize-space()='Generate CIF']")
 public static WebElement clk_ldGenerateCIFBtn;
+
+@FindBy(name="cust_712")
+public static WebElement SEL_ldTitle;
+
+@FindBy(name="cust_1397")
+public static WebElement SEL_ldName;
+
+@FindBy(name="cust_710")
+public static WebElement SEL_ldCountryofIncorporation;
+
+@FindBy(name="cust_800")
+public static WebElement SEL_ldResidenceCountry;
+
+
 //NBO
 
 
