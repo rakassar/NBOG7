@@ -133,6 +133,9 @@ public static WebElement clk_ldOwnershipStructurepicker;
 @FindBy(xpath="//a[@data-autoid='cust_123350_srch']")
 public static WebElement clk_screeningMatchespicker;
 
+@FindBy(xpath="//a[@data-autoid='cust_123352_srch']")
+public static WebElement clk_screeningMatchespickerCorporate;
+
 @FindBy(xpath="//a[@data-autoid='cust_122989_srch']")
 public static WebElement clk_ldCountryofOperationspicker;
 
@@ -306,6 +309,9 @@ public static WebElement sel_ldFlagForPre;
 
 @FindBy(name="cust_125590")
 public static WebElement sel_ldLegalIdentityType;
+
+@FindBy(name="cust_28624")
+public static WebElement sel_ldTypeOfUBO;
 
 @FindBy(xpath="//input[@data-autoid='cust_123401_ctrl']")
 public static WebElement ent_lddateOfCRS;
