@@ -167,7 +167,21 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     	CLDLPM.countryofIncorporation("AMERICAN SAMOA"); 
     	CLDLPM.ResidenceCountry("AMERICAN SAMOA");
     	CLDLPM.PEPStatusCorporate("Not Applicable");
+        CLDLPM.ScreeningmatchesCorporate("Positive Match (no Financial Crime negative news)");
+    	CLDLPM.clickAdd();
+    	Thread.sleep(500);
     	
+    	CLDLPM.addNewAuthorizedSignatory();
+    	CLDLPM.Associatedpartytype("UBO");
+    	CLDLPM.NameField("vISHAL");
+    	CLDLPM.countryofIncorporation("AMERICAN SAMOA");
+    	CLDLPM.TypeOfUBO("Individual");
+    	CLDLPM.ResidenceCountry("AMERICAN SAMOA");
+    	CLDLPM.PEPStatusCorporate("Not Applicable");
+        CLDLPM.ScreeningmatchesCorporate("Positive Match (no Financial Crime negative news)");
+    	CLDLPM.clickAdd();
+    	 CLDLPM.saveAndProceed();
+         Thread.sleep(5000);
     	
     	
     	

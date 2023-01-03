@@ -58,7 +58,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         lopm.SwitchToParentWindow();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.SalutationID("MR.");
-        CLDLPM.CustomerName("TestLead");
+        CLDLPM.CustomerName();
         CLDLPM.DateOfBirth("29/12/1965");
         CLDLPM.IDCardNo();
         CLDLPM.IDCardExpiry();

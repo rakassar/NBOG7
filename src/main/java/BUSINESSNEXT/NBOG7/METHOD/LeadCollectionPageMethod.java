@@ -31,10 +31,19 @@ public class LeadCollectionPageMethod extends HomePageMethod{
 		sal.selectByVisibleText(Salute);
 	}
 	
-	public void CustomerName(String name)
+	public void CustomerName()
 	{
 
-		    LeadCollectionPageObject.ent_ldcompanyName.sendKeys(name);
+		Random r = new Random();
+		 String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+		    final int N = 6;
+		    StringBuilder sb = new StringBuilder();
+		    for (int i = 0; i < N; i++) {
+		        sb.append(alphabet.charAt(r.nextInt(alphabet.length())));
+		    }
+		    String firstname = sb.toString();
+		    LeadCollectionPageObject.ent_ldcustomerName.sendKeys(firstname);
 		    }
 	public void companyName()
 	{
@@ -286,8 +295,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 Thread.sleep(500);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type1);
-		 Thread.sleep(800);
-
+		 Thread.sleep(100);
 		clients.sendKeys(Keys.ENTER);
 		 Thread.sleep(800);
 		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
@@ -320,6 +328,15 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	 
 	 public void Screeningmatches(String type) throws InterruptedException {
 		 LeadCollectionPageObject.clk_screeningMatchespicker.click();
+		 Thread.sleep(500);
+		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
+		clients.sendKeys(type);
+		clients.sendKeys(Keys.ENTER);
+		 Thread.sleep(500);
+		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
+	 }
+	 public void ScreeningmatchesCorporate(String type) throws InterruptedException {
+		 LeadCollectionPageObject.clk_screeningMatchespickerCorporate.click();
 		 Thread.sleep(500);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type);
@@ -516,7 +533,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type);
 		clients.sendKeys(Keys.ENTER);
-		 Thread.sleep(1000);
+		 Thread.sleep(111);
 		 LeadCollectionPageObject.clk_ldOriginCountry1name.click();
 	 }
 	 public void destinationCountry1(String type) throws InterruptedException {
@@ -755,6 +772,12 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	 public void LegalIdentityType(String type)
 	    {
 	    	Select sel=new Select(LeadCollectionPageObject.sel_ldLegalIdentityType);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void TypeOfUBO(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldTypeOfUBO);
 	    	sel.selectByVisibleText(type);
 	    }
 	 
