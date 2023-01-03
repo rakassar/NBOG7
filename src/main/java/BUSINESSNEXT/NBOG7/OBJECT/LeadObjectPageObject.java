@@ -37,6 +37,9 @@ public static WebElement get_leadIDCreated ;
 
 		@FindBy(xpath="(//a[@id ='1'])[3]")
 		 public static WebElement clk_retailOnboardingOman ;
+		
+		@FindBy(id="1")
+		 public static WebElement clk_corporateOnboardingOman ;
 
 		@FindBy(xpath="//span[@title = 'Address']")
 		 public static WebElement clk_Addresstab ;

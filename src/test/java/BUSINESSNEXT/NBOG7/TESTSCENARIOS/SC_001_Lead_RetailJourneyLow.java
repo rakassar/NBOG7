@@ -79,7 +79,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         CLDLPM.LeadSource("Google");
         scrollBy();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.PurposeOfAccount();
+        CLDLPM.PurposeOfAccount("Loan Payments");
         CLDLPM.staffCode();
         CLDLPM.PEPStatus("Not Applicable");
         CLDLPM.Screeningmatches("Positive Match (no Financial Crime negative news)");
@@ -127,6 +127,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         CLDLPM.USPassport("No");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.saveAndProceed();
+        Thread.sleep(5000);
         
         
 	}
@@ -164,6 +165,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     	CLDLPM.IssuingCountry("American Samoa");
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.saveAndProceed();
+        Thread.sleep(5000);
         
 
 	}
