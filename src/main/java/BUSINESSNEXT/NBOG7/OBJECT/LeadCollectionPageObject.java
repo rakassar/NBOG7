@@ -20,6 +20,12 @@ public static WebElement sel_ldSalutation;
 @FindBy(name="cust_661")
 public static WebElement sel_ldcustomerSegment;
 
+@FindBy(name="cust_125102")
+public static WebElement sel_ldEntityOman;
+
+@FindBy(name="cust_125103")
+public static WebElement sel_ldEnityOtherCountry;
+
 @FindBy(name="cust_1901")
 public static WebElement ent_ldcustomerName;
 
@@ -382,6 +388,8 @@ public static WebElement clk_ldAMLBtn;
 
 @FindBy(xpath="//span[normalize-space()='Generate CIF']")
 public static WebElement clk_ldGenerateCIFBtn;
+
+
 
 @FindBy(name="cust_712")
 public static WebElement SEL_ldTitle;

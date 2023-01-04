@@ -31,6 +31,17 @@ public class LeadCollectionPageMethod extends HomePageMethod{
 		sal.selectByVisibleText(Salute);
 	}
 	
+	
+	public void entityOman(String Salute) {
+		Select sal = new Select(LeadCollectionPageObject.sel_ldEntityOman);
+		sal.selectByVisibleText(Salute);
+	}
+	
+	public void entityOtherCountry(String Salute) {
+		Select sal = new Select(LeadCollectionPageObject.sel_ldEnityOtherCountry);
+		sal.selectByVisibleText(Salute);
+	}
+	
 	public void CustomerName()
 	{
 
@@ -286,7 +297,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 Thread.sleep(500);
 
 		clients.sendKeys(Keys.ENTER);
-		 Thread.sleep(500);
+		 Thread.sleep(700);
 		 LeadCollectionPageObject.clk_ldPEPStatusselect.click();
 	 }
 	 
@@ -315,13 +326,13 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	 
 	 public void OwnershipStructure(String type1) throws InterruptedException {
 		 LeadCollectionPageObject.clk_ldOwnershipStructurepicker.click();
-		 Thread.sleep(500);
+		 Thread.sleep(800);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type1);
-		 Thread.sleep(500);
+		 Thread.sleep(800);
 
 		clients.sendKeys(Keys.ENTER);
-		 Thread.sleep(500);
+		 Thread.sleep(800);
 		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
 	 }
 	 
@@ -361,7 +372,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type);
 		clients.sendKeys(Keys.ENTER);
-		 Thread.sleep(500);
+		 Thread.sleep(700);
 		 LeadCollectionPageObject.clk_ldOriginCountry1name.click();
 	 }
 	 
