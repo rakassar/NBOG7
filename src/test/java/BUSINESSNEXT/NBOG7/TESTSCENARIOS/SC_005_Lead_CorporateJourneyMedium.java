@@ -14,7 +14,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
 //@Listeners(crm.mhc.common.ListnersClassAnotation.class)
 @Listeners(BUSINESSNEXT.NBOG7.COMMON.ListnersClassAnotation.class)
 
-   public class SC_003_Lead_RetailJourneyMedium extends HomePageMethod
+   public class SC_005_Lead_CorporateJourneyMedium extends HomePageMethod
    {
 	//Object for methods class
 	LeadObjectPageMethod lopm=new LeadObjectPageMethod();
@@ -31,7 +31,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
 	{
 
 
-    	launchBrowser();
+     	launchBrowser();
     	Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     	TestDataFromExcel.DataRead();
@@ -54,80 +54,60 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         lopm.ClickOnboardCustomer();
         lopm.SwitchToSecondaryWindow();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        lopm.ClickOnRetailOnboarding();
+        lopm.ClickOnCorporateOnboarding();
         lopm.SwitchToParentWindow();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.SalutationID("MR.");
-        CLDLPM.CustomerName();
-        CLDLPM.DateOfBirth("29/12/1965");
-        
-        CLDLPM.visaExpiry();
-        CLDLPM.IDCardNo();
-        CLDLPM.IDCardExpiry();
-        CLDLPM.passportExpiry();
+        CLDLPM.customerSegment("Retail Banking - Mass");
+        CLDLPM.companyName();
+        CLDLPM.shortName("vin");
+        CLDLPM.DateOfEstablishment("29/12/1965");
+        CLDLPM.CRno();
+        CLDLPM.CRExpiry();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        CLDLPM.MonthlyIncome("435");
-        CLDLPM.EmployerType("Free-Zone Corporations");
-        CLDLPM.customerProfession("Accountant");
+        CLDLPM.dateOfRegistration("29/12/1922");
+        CLDLPM.placeOfRegistration("Noida");
+        CLDLPM.entityType("CD01-GENERAL PARTNERSHIPS");
         CLDLPM.AccountType("Call Deposit");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        CLDLPM.ProductsAndServices("Asset Management");
-        CLDLPM.AccountShortName("vin");
-        CLDLPM.EnterMobile();
+        CLDLPM.ProductsAndServices("Cards");
+        CLDLPM.AnalysisCode("AGRICULTURE & ALLIED ACTIVITY");
+        CLDLPM.p5UserCode("COR-Corporate Customer");
+        CLDLPM.NatureOfBusiness("Activities of call centers");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        CLDLPM.Literacy("Literate");
-        CLDLPM.LeadSource("Google");
-        scrollBy();
-        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.PurposeOfAccount("Loan Payments");
         CLDLPM.staffCode();
-        CLDLPM.PEPStatus("Not Applicable");
-        CLDLPM.Screeningmatches("No Match");
-        CLDLPM.HNWIStatus("No");
-        CLDLPM.CaptureAssociatedPartyInfo("No");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        CLDLPM.Surname("bishal");
+        CLDLPM.AverageExpectedTransaction("Upto OMR 100k");
+        CLDLPM.LengthofIncorporation("Greater than 1 year");
+        CLDLPM.OwnershipStructure("Government owned and controlled");
+        CLDLPM.sourceOfFunds("Government Aid");
+        CLDLPM.Screeningmatches("Positive Match (no Financial Crime negative news)");
+        CLDLPM.CountryofIncorporation("Oman");
+        CLDLPM.CountryofOperations("American Samoa");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        scrollBy();
-        CLDLPM.Designation("D001-General Manager");
-        CLDLPM.Employer("007");
-        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        scrollBy();
-        CLDLPM.POCode("101 - City Center MUSCAT");
-        CLDLPM.PObox("12");
-        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        scrollBy();
-        CLDLPM.AverageExpectedTransactionValuePerAnnum("Upto OMR 25k");
-        CLDLPM.relationshipAndServicingMethod("Digital Channel (via Self-service Kiosk)");
         CLDLPM.originCountry1("Algeria");
         CLDLPM.destinationCountry1("American Samoa");
+        CLDLPM.CountryofResidenceofSuppliers("American Samoa");
+        CLDLPM.CountryofResidenceofApplicantEntity("American Samoa");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        CLDLPM.sourceOfFunds("Government Aid");
+        CLDLPM.shareholderowning10ormore("No");
+        CLDLPM.relationshipAndServicingMethod("Face-to-Face Channel (via Branch)");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        CLDLPM.Residencestatus("Resident");
-        CLDLPM.Buildingno("234");
-        CLDLPM.wayNo("234");
-        CLDLPM.villaNo("324");
-        CLDLPM.Location("CCAE-MUSCAT");
+        CLDLPM.EnterMobile();
+        CLDLPM.POCodeCorporate("100 - Al Qurum");
+        CLDLPM.POboxCorporate("987");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        scrollBy();
-        CLDLPM.PlaceOfBirth("American Samoa");
-        CLDLPM.CountryOfBirth("AMERICAN SAMOA");
-        CLDLPM.GreenCardHolderFlag("No");
-        CLDLPM.MakeOngoingPayment("No");
-        CLDLPM.USTax("No");
-        CLDLPM.USCitizen("No");
-        CLDLPM.USPassport("No");
+        CLDLPM.fatcaUpdate("No");
+        CLDLPM.PurposeOfAccount("Business Transactions");
+        CLDLPM.subIndustryCorporate("Abrasive product manufacturing");
+        
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.saveAndProceed();
         Thread.sleep(5000);
@@ -139,33 +119,37 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
 	public void SC_001_TC_002() throws Exception
 	{
     	
-    	CLDLPM.CareofAddressApplicable("No");
+    	//CLDLPM.CareofAddressApplicable("No");
     	CLDLPM.SelfCertificationRequired("No");
-    	CLDLPM.MultipleNationality("No");
-    	scrollBy();
-        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-    	CLDLPM.StandingInstructiontoTransfer("No");
-    	CLDLPM.InternationalPhoneNumber("No");
-    	CLDLPM.ChangeinCircumstance("No");
-    	CLDLPM.CertificationValidity("29/12/2029");
-    	CLDLPM.CustomerLicenseownershipDetailsUpload();
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-    	CLDLPM.addNewResidenctCountry();
+    	CLDLPM.ClassificationOfEntity("Active NFFE");
+    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+    	CLDLPM.EntityFormUpload();
+    	CLDLPM.LegalIdentityType("Financial Institution (FI) – Investment Entity");
+    	CLDLPM.FinancialInstitution("hello");
+        CLDLPM.investmentEntity("hello"); 
+    	CLDLPM.addNewResidenctCountryCorporate();
     	CLDLPM.TaxID("Yes");
     	CLDLPM.CountryOfTax("American Samoa");
     	CLDLPM.TaxIDNumber("123432");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     	CLDLPM.clickAdd();
-        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        scrollBy();
-    	CLDLPM.POASignatoryAuthorityControlling("No");
-    	CLDLPM.HighvalueRelationshipManagerInquiry("Not Conducted");
+    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+    	scrollBy();
+    	CLDLPM.CustomerLicenseownershipDetailsUpload();
+    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+    	scrollBy();
+        CLDLPM.TypeOfCRS("Active NFE");
+        CLDLPM.ActiveNfeForm();
+        CLDLPM.dateOfCRS("25/11/2022");
+        CLDLPM.ChangeinCircumstance("No");
+        CLDLPM.POASignatoryAuthorityControlling("No");
+        CLDLPM.HighvalueRelationshipManagerInquiry("Not Conducted");
     	CLDLPM.ReportableAccountflag("No");
     	CLDLPM.flagforPreexisting("No");
-    	CLDLPM.dateOfCRS("29/12/2001");
-    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        scrollBy();
-    	CLDLPM.IssuingCountry("American Samoa");
+    	
+        
+    	
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.saveAndProceed();
         Thread.sleep(5000);
@@ -178,6 +162,32 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
 	{
     	Thread.sleep(4000);
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+    	CLDLPM.addNewAuthorizedSignatory();
+    	CLDLPM.Associatedpartytype("Authorized Signatory");
+    	CLDLPM.Title("MR.");
+    	CLDLPM.NameField("vISHAL");
+    	CLDLPM.countryofIncorporation("AMERICAN SAMOA"); 
+    	CLDLPM.ResidenceCountry("AMERICAN SAMOA");
+    	CLDLPM.PEPStatusCorporate("Not Applicable");
+        CLDLPM.ScreeningmatchesCorporate("Positive Match (no Financial Crime negative news)");
+    	CLDLPM.clickAdd();
+    	Thread.sleep(500);
+    	
+    	CLDLPM.addNewAuthorizedSignatory();
+    	CLDLPM.Associatedpartytype("UBO");
+    	CLDLPM.NameField("vISHAL");
+    	CLDLPM.countryofIncorporation("AMERICAN SAMOA");
+    	CLDLPM.TypeOfUBO("Individual");
+    	CLDLPM.ResidenceCountry("AMERICAN SAMOA");
+    	CLDLPM.PEPStatusCorporate("Not Applicable");
+        CLDLPM.ScreeningmatchesCorporate("Positive Match (no Financial Crime negative news)");
+    	CLDLPM.clickAdd();
+    	 CLDLPM.saveAndProceed();
+         Thread.sleep(5000);
+    	
+    	
+    	
+    	
         scrollBy();
         Thread.sleep(3000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
@@ -215,6 +225,9 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     	
     	
 	}
+    	
+    	
+	
     
     @Test(priority=4)
 	public void SC_001_TC_004() throws Exception
@@ -235,8 +248,8 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         ClickOnLeadswidget();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        lopm.categoryview("Retail Leads");
-        lopm.selfassignlead("Open A/c Verification Pending Retail");
+        lopm.categoryview("Corporate Leads");
+        lopm.selfassignlead("Open A/c Verification Pending Corporate");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         lopm.leadview("My Leads");
         lopm.onMyBucketlead();   
@@ -262,6 +275,66 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         CLDLPM.clickAMLButton();
         Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        lopm.ProcessApplicationPopUpClose();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        CLDLPM.clickClosePopup();
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        
+        lopm.ClickOnNMDDtab();
+        Thread.sleep(500);
+        lopm.closeContact1();
+        lopm.SwitchToSecondaryWindow();
+        CLDLPM.CreatedNewLeadEdit();
+        Thread.sleep(200);
+        CLDLPM.entityOman("No");
+        CLDLPM.entityOtherCountry("No");
+        Thread.sleep(200);
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        CLDLPM.clickSave();
+        Thread.sleep(2000);
+        closeCurrentBrowser();
+        lopm.SwitchToParentWindow();
+        Refresh();
+
+        lopm.ClickOnNMDDtab();
+        lopm.closeContact2();
+        lopm.SwitchToSecondaryWindow();
+
+        CLDLPM.CreatedNewLeadEdit();
+        Thread.sleep(200);
+        CLDLPM.entityOman("No");
+        CLDLPM.entityOtherCountry("No");
+        Thread.sleep(200);
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        CLDLPM.clickSave();
+        Thread.sleep(1000);
+        Thread.sleep(500);
+        closeCurrentBrowser();
+        lopm.SwitchToParentWindow();
+        Refresh();
+        Thread.sleep(1000);
+
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        scrollBy();
+        Thread.sleep(500);
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        scrollBy();
+        Thread.sleep(500);
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        scrollBy();
+        Thread.sleep(500);
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        scrollBy();
+        Thread.sleep(500);
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        scrollBy();
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        CLDLPM.SendtoAuthorizerBtn();
+        Thread.sleep(1000);
+        lopm.ProcessApplicationPopUpClose();
+        Thread.sleep(1000);
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
           QuiteBrowser();
     	
     	
@@ -283,10 +356,10 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     CheckRole();
     screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-    ClickOnLeadswidget();
+    clk_leadobject();
     screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-    lopm.categoryview("Retail Leads");
-    lopm.selfassignlead("Pending with Authorizer Oman Retail");
+    lopm.categoryview("Corporate Leads");
+    lopm.selfassignlead("Pending with Authorizer Oman Corp");
     screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     lopm.leadview("My Leads");
     lopm.onMyBucketlead();   
@@ -338,8 +411,8 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
             screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
             ClickOnLeadswidget();
             screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-            lopm.categoryview("Retail Leads");
-            lopm.selfassignlead("Approved by Authorizer/Compliance fr A/C Opening R");
+            lopm.categoryview("Corporate Leads");
+            lopm.selfassignlead("Approved by Authorizer/Compliance fr A/C Opening C");
             screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
             lopm.leadview("My Leads");
             lopm.onMyBucketlead();   
