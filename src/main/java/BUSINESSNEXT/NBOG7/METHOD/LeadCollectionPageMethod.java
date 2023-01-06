@@ -34,7 +34,7 @@ public class LeadCollectionPageMethod extends HomePageMethod{
 	public void CustomerName(String name)
 	{
 
-		    LeadCollectionPageObject.ent_ldcompanyName.sendKeys(name);
+		    LeadCollectionPageObject.ent_ldcustomerName.sendKeys(name);
 		    }
 	public void companyName()
 	{
