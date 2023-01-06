@@ -14,7 +14,7 @@ public LeadObjectPageObject (WebDriver driver)
 }
 
 
-@FindBy(xpath="//i[@title='On board Customer']")
+@FindBy(xpath="//i[@title='Onboard Customer']")
 public static WebElement clk_OnboardCustomer ;
 
 
@@ -38,10 +38,10 @@ public static WebElement get_leadIDCreated ;
 		public static WebElement clk_closeProcessApplicationPopup;
 
 		@FindBy(xpath="(//a[@id ='1'])[3]")
-		 public static WebElement clk_retailOnboardingOman ;
+		 public static WebElement clk_corporateOnboardingOman ;
 		
 		@FindBy(id="1")
-		 public static WebElement clk_corporateOnboardingOman ;
+		 public static WebElement clk_retailOnboardingOman ;
 
 		@FindBy(xpath="//span[@title = 'NMDD']")
 		 public static WebElement clk_NMDDtab ;

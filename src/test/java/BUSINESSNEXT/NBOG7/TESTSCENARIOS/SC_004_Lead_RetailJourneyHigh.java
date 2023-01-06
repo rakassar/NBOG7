@@ -196,6 +196,8 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
              CLDLPM.lookingforborrowingrelationship("No");
              CLDLPM.customerIsSelfEmployed("No");
              CLDLPM.VisaSponsorName("Test");
+             
+             
              CLDLPM.BuildingName("Avipsa");
              CLDLPM.EmployerPO("12");
              CLDLPM.HouseNO("111");

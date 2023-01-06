@@ -295,6 +295,23 @@ public static WebElement sel_ldcustomerIsSelfEmployed ;
 @FindBy(name="cust_124566")
 public static WebElement ent_ldVisaSponsorName;
 
+@FindBy(name="cust_125617")
+public static WebElement ent_ldEmployerName;
+
+@FindBy(xpath="//a[@data-autoid='cust_125621_srch']")
+public static WebElement pic_ldEmployerIndustryClick;
+
+
+@FindBy(xpath="//a[@data-autoid='cust_125623_srch']")
+public static WebElement pic_ldEmployerCountryClick;
+
+@FindBy(xpath="//a[@data-autoid='cust_125622_srch']")
+public static WebElement pic_ldEmployerActivityClick;
+
+
+
+
+
 @FindBy(name="cust_124588")
 public static WebElement ent_ldBuildingName;
 
@@ -307,9 +324,6 @@ public static WebElement ent_ldHouseNO;
 @FindBy(name="cust_124576")
 public static WebElement ent_ldStreet1;
 
-
-@FindBy(xpath="//a[@data-autoid='cust_124718_srch']")
-public static WebElement pic_ldEmployerCountryClick;
 
 
 @FindBy(name="cust_124636")
