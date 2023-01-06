@@ -709,6 +709,30 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	 	{
 		 LeadCollectionPageObject.ent_ldEmployerPO.sendKeys(value);
 	 	}
+	 public void EmployerName(String value) throws InterruptedException
+
+	 	{
+		 LeadCollectionPageObject.ent_ldEmployerName.sendKeys(value);
+	 	}
+	 public void employerIndustry(String type) throws InterruptedException {
+		 LeadCollectionPageObject.pic_ldEmployerIndustryClick.click();
+		 Thread.sleep(500);
+		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
+		clients.sendKeys(type);
+		clients.sendKeys(Keys.ENTER);
+		 Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
+	 }
+	 
+	 public void employerCountry(String type) throws InterruptedException {
+		 LeadCollectionPageObject.pic_ldEmployerIndustryClick.click();
+		 Thread.sleep(500);
+		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
+		clients.sendKeys(type);
+		clients.sendKeys(Keys.ENTER);
+		 Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
+	 }
 	 
 	 
 	 
