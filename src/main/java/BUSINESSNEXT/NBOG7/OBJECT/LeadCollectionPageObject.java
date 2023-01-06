@@ -303,10 +303,17 @@ public static WebElement pic_ldEmployerIndustryClick;
 
 
 @FindBy(xpath="//a[@data-autoid='cust_125623_srch']")
-public static WebElement pic_ldEmployerCountryClick;
+public static WebElement pic_ldEmployerIncorporationCountryClick;
+
+@FindBy(name="cust_125620")
+public static WebElement sel_ldEmploymentType;
 
 @FindBy(xpath="//a[@data-autoid='cust_125622_srch']")
 public static WebElement pic_ldEmployerActivityClick;
+
+
+@FindBy(xpath="//a[@data-autoid='cust_125678_srch']")
+public static WebElement pic_ldEmployerCountryResidence;
 
 
 
@@ -324,12 +331,75 @@ public static WebElement ent_ldHouseNO;
 @FindBy(name="cust_124576")
 public static WebElement ent_ldStreet1;
 
+ 
+@FindBy(name="cust_125651")
+public static WebElement ent_ldBuildingNO;
 
+@FindBy(name="cust_125652")
+public static WebElement ent_ldStreetNO;
+@FindBy(name="cust_125653")
+public static WebElement ent_ldArea;
+@FindBy(name="cust_125654")
+public static WebElement ent_ldCity;
+
+
+@FindBy(xpath="//a[@data-autoid='cust_125655_srch']")
+public static WebElement pic_ldStateCountry;
+
+
+
+
+@FindBy(name="cust_124637")
+public static WebElement sel_ldPOAHolder;
+
+@FindBy(name="cust_124638")
+public static WebElement sel_ldIndividualsOrEntities;
+
+@FindBy(name="cust_124590")
+public static WebElement ent_ldOriginatorPartyName;
+
+
+@FindBy(xpath="//a[@data-autoid='cust_124725_srch']")
+public static WebElement pic_ldOriginatorPartyNationality;
+
+@FindBy(name="cust_124591")
+public static WebElement ent_ldOriginatorAccountNumber;
+
+@FindBy(name="cust_125715")
+public static WebElement ent_ldONatureofrelationship;
+
+
+@FindBy(name="cust_125680")
+public static WebElement ent_ldOriginatorBankName;
 
 @FindBy(name="cust_124636")
 public static WebElement sel_ldYearOfEmployment;
 
+@FindBy(xpath="//a[@data-autoid='cust_124669_srch']")
+public static WebElement pic_ldAttachProofClick;
 
+@FindBy(xpath="//div[@data-autoid='ItemName_0']")
+public static WebElement pic_ldAttachProofSelect;
+
+
+
+
+
+
+@FindBy(name="cust_124641")
+public static WebElement sel_ldRCVOrSndMoney;
+
+@FindBy(name="cust_124643")
+public static WebElement sel_ldIES;
+
+@FindBy(name="cust_124644")
+public static WebElement sel_ldCstmrMntnRelationshipOtherOmani;
+
+@FindBy(name="cust_124645")
+public static WebElement sel_ldCstmrMntnRelationshipwithForeign;
+
+@FindBy(name="cust_124646")
+public static WebElement sel_ldDtlsOfAssociated;
 
 
 

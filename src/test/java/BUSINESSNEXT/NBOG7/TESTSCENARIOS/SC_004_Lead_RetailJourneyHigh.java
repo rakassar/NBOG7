@@ -30,7 +30,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
 	public void SC_001_TC_001() throws Exception
 	{
 
-
+    	
     	launchBrowser();
     	Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
@@ -165,7 +165,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     	CLDLPM.IssuingCountry("American Samoa");
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.saveAndProceed();
-        Thread.sleep(5000);
+        Thread.sleep(6000);
         
 
 	}
@@ -173,7 +173,8 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     @Test(priority=3)
 	public void SC_001_TC_003() throws Exception
 	{
-    	Thread.sleep(4000);
+    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+    	Thread.sleep(6000);
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
         Thread.sleep(3000);
@@ -182,11 +183,12 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     	CLDLPM.saveAndProceed();
+    	
     	Thread.sleep(6000);
-    	System.out.println("helloo");
+    	
 	}
     	 @Test(priority=4)
     		public void SC_001_TC_004() throws Exception
@@ -197,14 +199,29 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
              CLDLPM.customerIsSelfEmployed("No");
              CLDLPM.VisaSponsorName("Test");
              
-             
-             CLDLPM.BuildingName("Avipsa");
-             CLDLPM.EmployerPO("12");
              CLDLPM.HouseNO("111");
-             CLDLPM.Street1("121");
-             CLDLPM.EmployerCountry("American Samoa");
-             CLDLPM.YearOfEmployment("1-2 Year");
-    		 
+
+             CLDLPM.BuildingName("Avipsa");
+             CLDLPM.Buildingno("121");            
+             CLDLPM.StreetName("121");
+             
+             CLDLPM.StreetNO("hello123");
+             CLDLPM.Area("Area");
+             CLDLPM.City("cITY");
+             CLDLPM.StateCountry("american samoa");
+             CLDLPM.sePOAHolder("No");
+             CLDLPM.IndividualsOrEntities("No");
+             CLDLPM.OriginatorPartyNationality("american samoa");
+             CLDLPM.OriginatorPartyName("Hello");
+             CLDLPM.OriginatorBankName("bsiahl");
+             CLDLPM.OriginatorAccountNumber("92829213");
+             CLDLPM.Natureofrelationship("hellooo");
+             CLDLPM.AttachProofClick();
+             CLDLPM.RCVOrSndMoney("No");
+             CLDLPM.IES("No");
+             CLDLPM.CstmrMntnRelationshipOtherOmani("No");
+             CLDLPM.CstmrMntnRelationshipwithForeign("No");
+             CLDLPM.DtlsOfAssociated("No");
     		}
     	 @Test(priority=5)
  		public void SC_001_TC_005() throws Exception
