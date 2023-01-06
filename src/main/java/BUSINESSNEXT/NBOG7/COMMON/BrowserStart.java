@@ -51,6 +51,10 @@ public class BrowserStart implements Properties{
 	{
 		driver.navigate().to(URL);
 	}
+	
+	public void Refresh() {
+		driver.navigate().refresh();
+	}
 
 
 	// @AfterClass
@@ -59,6 +63,12 @@ public class BrowserStart implements Properties{
 	{
 
 		 driver.quit(); }
+	
+	
+	public void  closeCurrentBrowser() {
+		driver.close();
+		
+	}
 
 
 }
