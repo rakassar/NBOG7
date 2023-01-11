@@ -174,7 +174,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         scrollBy();
         Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        scrollBy();
+        //scrollBy();
         
 	}
     

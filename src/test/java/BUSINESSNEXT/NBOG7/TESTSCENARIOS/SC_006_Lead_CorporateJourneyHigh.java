@@ -187,15 +187,10 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		Thread.sleep(3000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
-		Thread.sleep(1000);
-		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		scrollBy();
-		Thread.sleep(1000);
+		Thread.sleep(1000);				
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		Thread.sleep(3000);
-
 		CLDLPM.saveAndProceed();
-
 		Thread.sleep(5000);
 
 	}
