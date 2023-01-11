@@ -94,6 +94,55 @@ public class LeadObjectPageMethod extends HomePageMethod{
 	   LeadObjectPageObject.clk_corporateOnboardingOman.click();
 
 	}
+   
+   public void clickAMLButton()
+
+
+   {
+		/*
+		 * JavascriptExecutor js = (JavascriptExecutor) driver;
+		 * js.executeScript("window.scrollBy(0,250)", "");
+		 *///driver.switchTo( ).alert( ).dismiss();
+	   LeadObjectPageObject.clk_ldAMLBtn.click();
+  
+
+   }
+
+public void ApprovedbyAuthorizerBtn()
+{
+	LeadObjectPageObject.clk_ldApprovedbyAuthorizerBtn.click();
+  
+
+   }
+
+public void SendtoAuthorizerBtn()
+{
+	LeadObjectPageObject.clk_ldSendtoAuthorizerBtn.click();
+  
+
+   }
+public void approvedByComplianceMaker()
+{
+	LeadObjectPageObject.clk_ldComplianceMakerBtn.click();
+  
+
+   }
+
+public void approvedByComplianceChecker()
+{
+	LeadObjectPageObject.clk_ldComplianceCheckerBtn.click();
+  
+
+   }
+
+
+
+public void clickGenerateCIFButton()
+   {
+	LeadObjectPageObject.clk_ldGenerateCIFBtn.click();
+  
+   }
+
    public void ClickOnboardCustomer()
 
  	{

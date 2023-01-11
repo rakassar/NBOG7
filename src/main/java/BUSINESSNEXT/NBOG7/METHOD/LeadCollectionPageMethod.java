@@ -232,7 +232,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 Thread.sleep(500);
 
 		clients.sendKeys(Keys.ENTER);
-		 Thread.sleep(700);
+		 Thread.sleep(1000);
 		 LeadCollectionPageObject.clk_ldPSproductselect.click(); 
 	 }
 	 
@@ -296,7 +296,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 Thread.sleep(500);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type1);
-		 Thread.sleep(500);
+		 Thread.sleep(800);
 
 		clients.sendKeys(Keys.ENTER);
 		 Thread.sleep(500);
@@ -357,7 +357,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type);
 		clients.sendKeys(Keys.ENTER);
-		 Thread.sleep(1000);
+		 Thread.sleep(1100);
 		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
 	 }
 	 public void ScreeningmatchesCorporate(String type) throws InterruptedException {
@@ -376,7 +376,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type);
 		clients.sendKeys(Keys.ENTER);
-		 Thread.sleep(500);
+		 Thread.sleep(800);
 		 LeadCollectionPageObject.clk_ldOriginCountry1name.click();
 	 }
 	 
@@ -483,9 +483,9 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	    {
 	    	WebElement clients= LeadCollectionPageObject.pic_ldDesignation;
 	    	clients.sendKeys(salesID);
-			Thread.sleep(1000);
+			Thread.sleep(1200);
 			clients.sendKeys(Keys.ARROW_DOWN);
-			Thread.sleep(500);
+			Thread.sleep(800);
 			clients.sendKeys(Keys.ENTER);
 			}
 	 
@@ -540,7 +540,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type);
 		clients.sendKeys(Keys.ENTER);
-		 Thread.sleep(500);
+		 Thread.sleep(900);
 		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
 	 }
 	 
@@ -578,7 +578,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type);
 		clients.sendKeys(Keys.ENTER);
-		 Thread.sleep(500);
+		 Thread.sleep(900);
 		 LeadCollectionPageObject.clk_ldSourceoffundSelect.click();
 	 }
 	 
@@ -692,6 +692,65 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	    	Select sel=new Select(LeadCollectionPageObject.sel_ldcustomerIsSelfEmployed);
 	    	sel.selectByVisibleText(type);
 	    }
+	 
+	 public void LengthOfBusiness(String type)
+	    {
+	    	LeadCollectionPageObject.ent_ldLengthOfBusiness.sendKeys(type);
+	    }
+	 
+	 public void profileOfCompany(String type)
+	    {
+	    	LeadCollectionPageObject.ent_ldProfileOfCountry.sendKeys(type);
+	    }
+	 
+	 public void typeOfProduct(String type)
+	    {
+	    	LeadCollectionPageObject.ent_ldTypeOfProduct.sendKeys(type);
+	    }
+	 
+	 public void Trade(String type)
+	    {
+	    	LeadCollectionPageObject.ent_ldTrade.sendKeys(type);
+	    }
+	 
+	 public void MainOriginOfBusiness(String type)
+	    {
+	    	LeadCollectionPageObject.ent_ldMainOriginOfBusiness.sendKeys(type);
+	    }
+	 public void BusinessProfile(String type)
+	    {
+	    	LeadCollectionPageObject.ent_ldBusinessProfile.sendKeys(type);
+	    }
+	 public void NotBeRoutingFunds(String type)
+	    {
+	    	LeadCollectionPageObject.ent_ldNotBeRoutingFunds.sendKeys(type);
+	    }
+	 
+	 public void CharitableServices(String type)
+	    {
+		 Select sel=new Select(LeadCollectionPageObject.sel_ldCharitableServices);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 
+	 public void IntoExchangeMoney(String type)
+	    {
+		 Select sel=new Select(LeadCollectionPageObject.sel_ldIntoExchangeMoney);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void PresenceInDifferentCountry(String type)
+	    {
+		 Select sel=new Select(LeadCollectionPageObject.sel_ldPresenceInDifferentCountry);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void NoOfPersonEmployed(String type)
+	    {
+		 Select sel=new Select(LeadCollectionPageObject.sel_ldNoOfPersonEmployed);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
 	 public void VisaSponsorName(String value) throws InterruptedException
 
 	 	{
@@ -709,10 +768,19 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	 	{
 		 LeadCollectionPageObject.ent_ldEmployerPO.sendKeys(value);
 	 	}
-	 public void EmployerName(String value) throws InterruptedException
+	 public void EmployerNameHigh() throws InterruptedException
 
 	 	{
-		 LeadCollectionPageObject.ent_ldEmployerName.sendKeys(value);
+		 Random r = new Random();
+		 String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+		    final int N = 6;
+		    StringBuilder sb = new StringBuilder();
+		    for (int i = 0; i < N; i++) {
+		        sb.append(alphabet.charAt(r.nextInt(alphabet.length())));
+		    }
+		    String firstname = sb.toString();
+		 LeadCollectionPageObject.ent_ldEmployerNameHigh.sendKeys(firstname);
 	 	}
 	 public void employerIndustry(String type) throws InterruptedException {
 		 LeadCollectionPageObject.pic_ldEmployerIndustryClick.click();
@@ -724,18 +792,75 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
 	 }
 	 
-	 public void employerCountry(String type) throws InterruptedException {
-		 LeadCollectionPageObject.pic_ldEmployerIndustryClick.click();
+	 public void OriginatorPartyNationality(String type) throws InterruptedException {
+		 LeadCollectionPageObject.pic_ldOriginatorPartyNationality.click();
 		 Thread.sleep(500);
 		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
 		clients.sendKeys(type);
 		clients.sendKeys(Keys.ENTER);
 		 Thread.sleep(1000);
-		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
+		 LeadCollectionPageObject.clk_ldIssuingCountry.click();
+	 }
+	 
+	 public void employerIncorporationCountry(String type) throws InterruptedException {
+		 LeadCollectionPageObject.pic_ldEmployerIncorporationCountryClick.click();
+		 Thread.sleep(500);
+		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
+		clients.sendKeys(type);
+		clients.sendKeys(Keys.ENTER);
+		 Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_ldIssuingCountry.click();
+	 }
+	 
+	 public void StateCountry(String type) throws InterruptedException {
+		 LeadCollectionPageObject.pic_ldStateCountry.click();
+		 Thread.sleep(500);
+		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
+		clients.sendKeys(type);
+		clients.sendKeys(Keys.ENTER);
+		 Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_ldIssuingCountry.click();
 	 }
 	 
 	 
+	 public void EmploymentType(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldEmploymentType);
+	    	sel.selectByVisibleText(type);
+	    }
 	 
+	 public void IndividualsOrEntities(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldIndividualsOrEntities);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void sePOAHolder(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldPOAHolder);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void EmployerCountryResidence(String type) throws InterruptedException {
+		 LeadCollectionPageObject.pic_ldEmployerCountryResidence.click();
+		 Thread.sleep(500);
+		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
+		clients.sendKeys(type);
+		clients.sendKeys(Keys.ENTER);
+		 Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_ldIssuingCountry.click();
+	 }
+ public void EmployerActivity() throws InterruptedException {
+		 
+		 
+		 LeadCollectionPageObject.pic_ldEmployerActivityClick.click();
+		 Thread.sleep(500);
+
+
+		 LeadCollectionPageObject.clk_ldcheckboxPOA.click();
+		 Thread.sleep(100);
+		 LeadCollectionPageObject.clk_ldOKbutton.click(); 
+	 }
 	 
 	 
 	 
@@ -744,24 +869,129 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	 	{
 		 LeadCollectionPageObject.ent_ldHouseNO.sendKeys(value);
 	 	}
-	 public void Street1(String value) throws InterruptedException
+	 public void StreetName(String value) throws InterruptedException
 
 	 	{
 		 LeadCollectionPageObject.ent_ldStreet1.sendKeys(value);
 	 	}
-	 public void EmployerCountry(String type) throws InterruptedException {
-		 LeadCollectionPageObject.pic_ldEmployerCountryClick.click();
-		 Thread.sleep(500);
-		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
-		clients.sendKeys(type);
-		clients.sendKeys(Keys.ENTER);
+	 public void City(String value) throws InterruptedException
+
+	 	{
+		 LeadCollectionPageObject.ent_ldCity.sendKeys(value);
+	 	}
+	 
+	 public void Area(String value) throws InterruptedException
+
+	 	{
+		 LeadCollectionPageObject.ent_ldArea.sendKeys(value);
+	 	}
+	 
+	 public void StreetNO(String value) throws InterruptedException
+
+	 	{
+		 LeadCollectionPageObject.ent_ldStreetNO.sendKeys(value);
+	 	} 
+	 
+	 public void BuildingNOHigh(String value) throws InterruptedException
+
+	 	{
+		 LeadCollectionPageObject.ent_ldBuildingNOHigh.sendKeys(value);
+	 	} 
+	 
+	 public void Natureofrelationship(String value) throws InterruptedException
+
+	 	{
+		 LeadCollectionPageObject.ent_ldONatureofrelationship.sendKeys(value);
+	 	}
+	 public void OriginatorAccountNumber(String value) throws InterruptedException
+
+	 	{
+		 LeadCollectionPageObject.ent_ldOriginatorAccountNumber.sendKeys(value);
+	 	}
+	 
+	 public void OriginatorPartyName(String value) throws InterruptedException
+
+	 	{
+		 LeadCollectionPageObject.ent_ldOriginatorPartyName.sendKeys(value);
+	 	}
+	 
+	 public void OriginatorBankName(String value) throws InterruptedException
+
+	 	{
+		 LeadCollectionPageObject.ent_ldOriginatorBankName.sendKeys(value);
+	 	}
+	
+public void AttachProofClick() throws InterruptedException {
+		 
+		 
+		 LeadCollectionPageObject.pic_ldAttachProofClick.click();
 		 Thread.sleep(1000);
-		 LeadCollectionPageObject.clk_ldIssuingCountry.click();
+
+		 LeadCollectionPageObject.pic_ldAttachProofSelect.click();
+		 Thread.sleep(100);
+		
 	 }
-	 public void YearOfEmployment(String type)
+	 
+	 public void RCVOrSndMoney(String type)
 	    {
-	    	Select sel=new Select(LeadCollectionPageObject.sel_ldYearOfEmployment);
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldRCVOrSndMoney);
 	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void ManagaedByNaturalPerson(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldRCVOrSndMoney);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void BusinessInHighRisk(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldBusinessInHighRisk);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void IntstInHighRiskIndustry(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldIntstInHighRiskIndustry);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void IES(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldIES);
+	    	sel.selectByVisibleText(type);
+	    }
+	 public void IESCorporate(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldIESCorporate);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void CstmrMntnRelationshipOtherOmani(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldCstmrMntnRelationshipOtherOmani);
+	    	sel.selectByVisibleText(type);
+	    }
+	 public void CstmrMntnRelationshipwithForeign(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldCstmrMntnRelationshipwithForeign);
+	    	sel.selectByVisibleText(type);
+	    }
+	 public void DtlsOfAssociated(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldDtlsOfAssociated);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void PerformedSiteVisit(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldPerformedSiteVisit);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void PleaseJustify(String type)
+	    {
+	    LeadCollectionPageObject.ent_ldPleaseJustify.sendKeys(type);
 	    }
 	 
 	 
@@ -891,6 +1121,13 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 
 		 
 	 }
+ public void IDNoCRS(String Name) {
+	 
+	 LeadCollectionPageObject.ent_ldIDNoCRS.sendKeys(Name);;
+	 
+	 
+	 
+ }
  
 	 public void LegalIdentityType(String type)
 	    {
@@ -960,6 +1197,63 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 LeadCollectionPageObject.clk_ldAddNewAuthorisedSignatory.click();
 	 }
 	 
+	 public void AddNewSupplier() throws InterruptedException {
+		 Thread.sleep(500);
+
+		 LeadCollectionPageObject.clk_ldAddNewSupplier.click();
+	 }
+	 
+	 public void SupplierName(String file) throws InterruptedException {
+		 Thread.sleep(500);
+
+		 LeadCollectionPageObject.ent_ldDSupplierName.sendKeys(file);;
+	 }
+	 public void TypeOfProductAddSupplier(String file) throws InterruptedException {
+		 Thread.sleep(500);
+
+		 LeadCollectionPageObject.ent_ldTypeOfProductAddSupplier.sendKeys(file);;
+	 }
+	 public void PrcntgOfBusiness(String file) throws InterruptedException {
+		 Thread.sleep(500);
+
+		 LeadCollectionPageObject.ent_ldPrcntgOfBusiness.sendKeys(file);;
+	 }
+	 
+	 public void SupplierWebsite(String file) throws InterruptedException {
+		 Thread.sleep(500);
+
+		 LeadCollectionPageObject.ent_ldDSupplierWebsite.sendKeys(file);;
+	 }
+	 public void AddressCountry(String type) throws InterruptedException {
+		 LeadCollectionPageObject.pic_ldAddressCountry.click();
+		 Thread.sleep(800);
+		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
+		clients.sendKeys(type);
+		clients.sendKeys(Keys.ENTER);
+		 Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_ldIssuingCountry.click();
+	 }
+	 
+	 public void NatureOfBusinessAddSupplier(String type) throws InterruptedException {
+		 LeadCollectionPageObject.pic_ldNatureOfBusinessAddSupplier.click();
+		 Thread.sleep(800);
+		 WebElement clients = LeadCollectionPageObject.ent_ldPSsearchBox;
+		clients.sendKeys(type);
+		clients.sendKeys(Keys.ENTER);
+		 Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_ldBusinessSetUpType.click();
+	 }
+	 
+	 
+	 
+	 
+	 
+	 public void AddNewCustomer() throws InterruptedException {
+		 Thread.sleep(500);
+
+		 LeadCollectionPageObject.clk_ldAddNewCustomer.click();
+	 }
+	 
 	 
 	 public void CountryOfTax(String type) throws InterruptedException {
 		 LeadCollectionPageObject.pic_ldCountryOfTax.click();
@@ -977,7 +1271,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	    	sel.selectByVisibleText(type);
 	    }
 	 public void TaxIDNumber(String no) throws InterruptedException {
-		 Thread.sleep(500);
+		 Thread.sleep(800);
 
 		 LeadCollectionPageObject.slk_ldTaxIDNumber.sendKeys(no);;
 	 }
@@ -988,40 +1282,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 LeadCollectionPageObject.clk_ldAdd.click();
 	 }
 	 
-	 public void clickAMLButton()
-
-
-	    {
-			/*
-			 * JavascriptExecutor js = (JavascriptExecutor) driver;
-			 * js.executeScript("window.scrollBy(0,250)", "");
-			 *///driver.switchTo( ).alert( ).dismiss();
-	    	LeadCollectionPageObject.clk_ldAMLBtn.click();
-	   
-
-	    }
-	 
-	 public void ApprovedbyAuthorizerBtn()
-	 {
-	    	LeadCollectionPageObject.clk_ldApprovedbyAuthorizerBtn.click();
-	   
-
-	    }
-	 
-	 public void SendtoAuthorizerBtn()
-	 {
-	    	LeadCollectionPageObject.clk_ldSendtoAuthorizerBtn.click();
-	   
-
-	    }
-
-	 
-	 public void clickGenerateCIFButton()
-	    {
-	    	LeadCollectionPageObject.clk_ldGenerateCIFBtn.click();
-	   
-	    }
-	 
+	
 	 
 	
 	
@@ -1298,6 +1559,20 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		    	sel.selectByVisibleText(flag);
 
 		    }
+		    
+		    
+		    public void complianceComment (String flag)
+		    {
+		    	LeadCollectionPageObject.ent_ldComplianceComment.sendKeys(flag);
+
+		    }
+		    public void clickUpdate ()
+		    {
+		    	LeadCollectionPageObject.clk_ldAdd.click();
+
+		    }
+		    
+		    
 		    public void fatcaFlag (String flag)
 		    {
 		    	Select sel = new Select(LeadCollectionPageObject.clk_ldFatcaFlag);

@@ -65,7 +65,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         CLDLPM.CRExpiry();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        CLDLPM.dateOfRegistration("29/12/1922");
+        CLDLPM.dateOfRegistration("29/12/1925");
         CLDLPM.placeOfRegistration("Noida");
         CLDLPM.entityType("CD01-GENERAL PARTNERSHIPS");
         CLDLPM.AccountType("Call Deposit");
@@ -120,39 +120,41 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
 	{
     	
     	//CLDLPM.CareofAddressApplicable("No");
-    	CLDLPM.SelfCertificationRequired("No");
-    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-    	CLDLPM.ClassificationOfEntity("Active NFFE");
-    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-    	CLDLPM.EntityFormUpload();
-    	CLDLPM.LegalIdentityType("Financial Institution (FI) – Investment Entity");
-    	CLDLPM.FinancialInstitution("hello");
-        CLDLPM.investmentEntity("hello"); 
-    	CLDLPM.addNewResidenctCountryCorporate();
-    	CLDLPM.TaxID("Yes");
-    	CLDLPM.CountryOfTax("American Samoa");
-    	CLDLPM.TaxIDNumber("123432");
-        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-    	CLDLPM.clickAdd();
-    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-    	scrollBy();
-    	CLDLPM.CustomerLicenseownershipDetailsUpload();
-    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-    	scrollBy();
-        CLDLPM.TypeOfCRS("Active NFE");
-        CLDLPM.ActiveNfeForm();
-        CLDLPM.dateOfCRS("25/11/2022");
-        CLDLPM.ChangeinCircumstance("No");
-        CLDLPM.POASignatoryAuthorityControlling("No");
-        CLDLPM.HighvalueRelationshipManagerInquiry("Not Conducted");
-    	CLDLPM.ReportableAccountflag("No");
-    	CLDLPM.flagforPreexisting("No");
-    	
-        
-    	
-    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.saveAndProceed();
-        Thread.sleep(5000);
+       	CLDLPM.SelfCertificationRequired("No");
+       	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+       	CLDLPM.ClassificationOfEntity("Active NFFE");
+       	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+       	CLDLPM.EntityFormUpload();
+       	scrollBy();
+       	CLDLPM.LegalIdentityType("Non-Financial Entity (NFE)");
+       	//CLDLPM.FinancialInstitution("hello");
+           //CLDLPM.investmentEntity("hello"); 
+       	CLDLPM.addNewResidenctCountryCorporate();
+       	CLDLPM.TaxID("Yes");
+       	CLDLPM.CountryOfTax("American Samoa");
+       	CLDLPM.TaxIDNumber("123432");
+           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+       	CLDLPM.clickAdd();
+       	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+       	scrollBy();
+       	//CLDLPM.CustomerLicenseownershipDetailsUpload();
+       	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+       	scrollBy();
+           //CLDLPM.TypeOfCRS("Active NFE");
+           //CLDLPM.ActiveNfeForm();
+       	CLDLPM.IDNoCRS("452424");
+           CLDLPM.dateOfCRS("25/11/2022");
+           //CLDLPM.ChangeinCircumstance("No");
+           CLDLPM.POASignatoryAuthorityControlling("No");
+           CLDLPM.HighvalueRelationshipManagerInquiry("Not Conducted");
+       	CLDLPM.ReportableAccountflag("No");
+       	CLDLPM.flagforPreexisting("No");
+       	
+           
+       	
+       	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+           CLDLPM.saveAndProceed();
+           Thread.sleep(5000);
         
 
 	}
@@ -269,7 +271,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         scrollBy();
         Thread.sleep(500);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.clickAMLButton();
+        lopm.clickAMLButton();
         Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         lopm.ProcessApplicationPopUpClose();
@@ -289,10 +291,12 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         Thread.sleep(200);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.clickSave();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         closeCurrentBrowser();
         lopm.SwitchToParentWindow();
+        Refresh();
 
+        lopm.ClickOnNMDDtab();
         lopm.closeContact2();
         lopm.SwitchToSecondaryWindow();
 
@@ -308,7 +312,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         closeCurrentBrowser();
         lopm.SwitchToParentWindow();
         Refresh();
-        Thread.sleep(500);
+        Thread.sleep(1000);
 
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.clickClosePopup();
@@ -327,7 +331,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.clickGenerateCIFButton();
+        lopm.clickGenerateCIFButton();
         Thread.sleep(10000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         lopm.ProcessApplicationPopUpClose();
