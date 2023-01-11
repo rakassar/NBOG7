@@ -44,7 +44,6 @@ public class LeadCollectionPageMethod extends HomePageMethod{
 	
 	public void CustomerName()
 	{
-
 		Random r = new Random();
 		 String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -55,7 +54,7 @@ public class LeadCollectionPageMethod extends HomePageMethod{
 		    }
 		    String firstname = sb.toString();
 		    LeadCollectionPageObject.ent_ldcustomerName.sendKeys(firstname);
-		    }
+		     }
 	public void companyName()
 	{
 		Random r = new Random();
