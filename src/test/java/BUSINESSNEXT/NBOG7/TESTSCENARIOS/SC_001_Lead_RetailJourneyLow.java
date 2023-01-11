@@ -143,9 +143,9 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     	CLDLPM.StandingInstructiontoTransfer("No");
     	CLDLPM.InternationalPhoneNumber("No");
-    	CLDLPM.ChangeinCircumstance("No");
+    	//CLDLPM.ChangeinCircumstance("No");
     	CLDLPM.CertificationValidity("29/12/2029");
-    	CLDLPM.CustomerLicenseownershipDetailsUpload();
+    	//CLDLPM.CustomerLicenseownershipDetailsUpload();
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     	CLDLPM.addNewResidenctCountry();
     	CLDLPM.TaxID("Yes");
@@ -155,26 +155,19 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     	CLDLPM.clickAdd();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-    	CLDLPM.POASignatoryAuthorityControlling("No");
+    	//CLDLPM.POASignatoryAuthorityControlling("No");
     	CLDLPM.HighvalueRelationshipManagerInquiry("Not Conducted");
     	CLDLPM.ReportableAccountflag("No");
-    	CLDLPM.flagforPreexisting("No");
+    	//CLDLPM.flagforPreexisting("No");
     	CLDLPM.dateOfCRS("29/12/2001");
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
     	CLDLPM.IssuingCountry("American Samoa");
+    	Thread.sleep(3000);
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.saveAndProceed();
+    	CLDLPM.saveAndProceed();
         Thread.sleep(5000);
-        
-
-	}
-    
-    @Test(priority=3)
-	public void SC_001_TC_003() throws Exception
-	{
-    	Thread.sleep(4000);
-    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
         Thread.sleep(3000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
@@ -182,7 +175,13 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        Thread.sleep(1000);
+        
+	}
+    
+    @Test(priority=3)
+	public void SC_001_TC_003() throws Exception
+	{
+    	Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     	CLDLPM.saveAndProceed();
     	Thread.sleep(6000);
@@ -256,7 +255,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         scrollBy();
         Thread.sleep(500);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.clickAMLButton();
+        lopm.clickAMLButton();
         Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         lopm.ProcessApplicationPopUpClose();
@@ -279,7 +278,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         scrollBy();
         Thread.sleep(500);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.clickGenerateCIFButton();
+        lopm.clickGenerateCIFButton();
         Thread.sleep(6000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         lopm.ProcessApplicationPopUpClose();

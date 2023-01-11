@@ -40,6 +40,26 @@ public static WebElement get_leadIDCreated ;
 		@FindBy(xpath="(//a[@id ='1'])[3]")
 		 public static WebElement clk_corporateOnboardingOman ;
 		
+		
+		@FindBy(xpath="//span[normalize-space()='AML Verification']")
+		public static WebElement clk_ldAMLBtn;
+
+		@FindBy(xpath="//span[normalize-space()='Approved by Authorizer']")
+		public static WebElement clk_ldApprovedbyAuthorizerBtn;
+
+
+		@FindBy(xpath="//span[normalize-space()='Send to Authorizer']")
+		public static WebElement clk_ldSendtoAuthorizerBtn;
+		
+		@FindBy(xpath="//span[normalize-space()='Approved by Compliance Maker']")
+		public static WebElement clk_ldComplianceMakerBtn;
+		
+		@FindBy(xpath="//span[normalize-space()='Approved by Compliance Checker']")
+		public static WebElement clk_ldComplianceCheckerBtn;
+
+		@FindBy(xpath="//span[normalize-space()='Generate CIF']")
+		public static WebElement clk_ldGenerateCIFBtn;
+		
 		@FindBy(id="1")
 		 public static WebElement clk_retailOnboardingOman ;
 
