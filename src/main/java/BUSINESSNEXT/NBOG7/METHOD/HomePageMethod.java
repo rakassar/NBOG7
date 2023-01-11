@@ -95,7 +95,11 @@ public class HomePageMethod extends LoginPageMethod{
 
    }
 
-
+public void scrollToBottom() {
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+     //Scroll down till the bottom of the page
+     js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+}
 
 public void scrollBy()
 

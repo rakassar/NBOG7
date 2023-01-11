@@ -20,6 +20,12 @@ public static WebElement sel_ldSalutation;
 @FindBy(name="cust_661")
 public static WebElement sel_ldcustomerSegment;
 
+@FindBy(name="cust_125102")
+public static WebElement sel_ldEntityOman;
+
+@FindBy(name="cust_125103")
+public static WebElement sel_ldEnityOtherCountry;
+
 @FindBy(name="cust_1901")
 public static WebElement ent_ldcustomerName;
 
@@ -44,6 +50,12 @@ public static WebElement ent_ldRegistrationPlace;
 
 @FindBy(xpath="//input[@data-autoid = 'cust_582_ctrl']")
 public static WebElement ent_ldIDCardExpiry;
+
+@FindBy(xpath="//input[@data-autoid = 'cust_626_ctrl']")
+public static WebElement ent_ldPassportExpiry;
+
+@FindBy(xpath="//input[@data-autoid = 'cust_440_ctrl']")
+public static WebElement ent_ldvisaExpiry;
 
 @FindBy(name="cust_583")
 public static WebElement sel_ldEmployerType;
@@ -132,6 +144,9 @@ public static WebElement clk_ldOwnershipStructurepicker;
 
 @FindBy(xpath="//a[@data-autoid='cust_123350_srch']")
 public static WebElement clk_screeningMatchespicker;
+
+@FindBy(xpath="//a[@data-autoid='cust_123352_srch']")
+public static WebElement clk_screeningMatchespickerCorporate;
 
 @FindBy(xpath="//a[@data-autoid='cust_122989_srch']")
 public static WebElement clk_ldCountryofOperationspicker;
@@ -264,7 +279,63 @@ public static WebElement sel_ldUSpassHolder;
 @FindBy(css="a[data-autoid='FlowNext']")
 public static WebElement clk_saveandproceed ;
 
+//high form
+@FindBy(name="cust_124562")
+public static WebElement ent_ldPurposeofrequesting;
 
+@FindBy(name="cust_124674")
+public static WebElement sel_ldAlreadyborrowingrelationship ;
+
+@FindBy(name="cust_124677")
+public static WebElement sel_ldlookingforborrowingrelationship ;
+
+@FindBy(name="cust_124635")
+public static WebElement sel_ldcustomerIsSelfEmployed ;
+
+@FindBy(name="cust_124566")
+public static WebElement ent_ldVisaSponsorName;
+
+@FindBy(name="cust_125617")
+public static WebElement ent_ldEmployerName;
+
+@FindBy(xpath="//a[@data-autoid='cust_125621_srch']")
+public static WebElement pic_ldEmployerIndustryClick;
+
+
+@FindBy(xpath="//a[@data-autoid='cust_125623_srch']")
+public static WebElement pic_ldEmployerCountryClick;
+
+@FindBy(xpath="//a[@data-autoid='cust_125622_srch']")
+public static WebElement pic_ldEmployerActivityClick;
+
+
+
+
+
+@FindBy(name="cust_124588")
+public static WebElement ent_ldBuildingName;
+
+@FindBy(name="cust_147")
+public static WebElement ent_ldEmployerPO;
+
+@FindBy(name="cust_124567")
+public static WebElement ent_ldHouseNO;
+
+@FindBy(name="cust_124576")
+public static WebElement ent_ldStreet1;
+
+
+
+@FindBy(name="cust_124636")
+public static WebElement sel_ldYearOfEmployment;
+
+
+
+
+
+
+
+//
 
 //CRS
 @FindBy(name="cust_123396")
@@ -306,6 +377,9 @@ public static WebElement sel_ldFlagForPre;
 
 @FindBy(name="cust_125590")
 public static WebElement sel_ldLegalIdentityType;
+
+@FindBy(name="cust_28624")
+public static WebElement sel_ldTypeOfUBO;
 
 @FindBy(xpath="//input[@data-autoid='cust_123401_ctrl']")
 public static WebElement ent_lddateOfCRS;
@@ -374,8 +448,17 @@ public static WebElement clk_save ;
 @FindBy(xpath="//span[normalize-space()='AML Verification']")
 public static WebElement clk_ldAMLBtn;
 
+@FindBy(xpath="//span[normalize-space()='Approved by Authorizer']")
+public static WebElement clk_ldApprovedbyAuthorizerBtn;
+
+
+@FindBy(xpath="//span[normalize-space()='Send to Authorizer']")
+public static WebElement clk_ldSendtoAuthorizerBtn;
+
 @FindBy(xpath="//span[normalize-space()='Generate CIF']")
 public static WebElement clk_ldGenerateCIFBtn;
+
+
 
 @FindBy(name="cust_712")
 public static WebElement SEL_ldTitle;
