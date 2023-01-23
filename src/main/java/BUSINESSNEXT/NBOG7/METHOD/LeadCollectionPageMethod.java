@@ -17,6 +17,7 @@ public class LeadCollectionPageMethod extends HomePageMethod{
 	String SDmobilenumber;
 	public static String leadid;
 	public static String Employeetype;
+	public String Leadstatus;
 
 //************************Fill the Info for new lead process*****************************-------------//
 //NBO
@@ -640,6 +641,26 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	    }
 	 
 	 
+	 public void getStatusCode() 
+	 
+	 {
+		    Leadstatus=LeadCollectionPageObject.get_leadStatusCode.getText();
+		    System.out.println(Leadstatus);
+		    
+		
+	   }
+	 
+	   public void waitTillNextStatusCode(String nextstatuscode) throws InterruptedException {
+		  do{
+			  //Refresh();
+			  wait();
+			 // Thread.sleep(1500);
+			  
+		  }   while(Leadstatus.equalsIgnoreCase(nextstatuscode));
+		  
+	   }
+		  
+	   
 	 public void USTax(String type)
 	    {
 	    	Select sel=new Select(LeadCollectionPageObject.sel_ldUSTax);

@@ -70,7 +70,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         CLDLPM.AccountType("Call Deposit");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        CLDLPM.ProductsAndServices("Loans and Advances");
+       // CLDLPM.ProductsAndServices("Loans and Advances");
         CLDLPM.AccountShortName("vin");
         CLDLPM.EnterMobile();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
@@ -127,7 +127,8 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         CLDLPM.USPassport("No");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.saveAndProceed();
-        Thread.sleep(5000);
+        CLDLPM.getStatusCode(); 
+        
         
         
 	}
@@ -175,6 +176,8 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         //scrollBy();
+        CLDLPM.waitTillNextStatusCode("Verification Pending");
+        
         
 	}
     

@@ -832,4 +832,8 @@ public static WebElement clk_CRRSCBtnNonIndi;
 
 @FindBy(name="cust_1516")
 public static WebElement sel_ldperaddaspreaddNonIndi;
+
+
+@FindBy(xpath="//span[@data-autoid= 'LE_STATUSCODE_ctrl']")
+public static WebElement get_leadStatusCode;
 }

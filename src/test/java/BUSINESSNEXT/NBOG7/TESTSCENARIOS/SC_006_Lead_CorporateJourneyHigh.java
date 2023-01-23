@@ -69,7 +69,7 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		CLDLPM.AccountType("Call Deposit");
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
-		CLDLPM.ProductsAndServices("Cards");
+		//CLDLPM.ProductsAndServices("Cards");
 		CLDLPM.AnalysisCode("AGRICULTURE & ALLIED ACTIVITY");
 		CLDLPM.p5UserCode("COR-Corporate Customer");
 		CLDLPM.NatureOfBusiness("Activities of call centers");
