@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import BUSINESSNEXT.NBOG7.OBJECT.*;
 
+
 public class LeadObjectPageMethod extends HomePageMethod{
 
    public static String leadid;
@@ -33,7 +34,7 @@ public class LeadObjectPageMethod extends HomePageMethod{
 	        Select bucket2 = new Select(LeadObjectPageObject.sel_leadView);
           bucket2.selectByVisibleText(Leadcategoryview);
 	}
-   
+  
    
    
 
@@ -43,7 +44,7 @@ public class LeadObjectPageMethod extends HomePageMethod{
 
 		    
 		    leadview(Leadview);
-		    
+		    LeadObjectPageObject.clk_arrorw.click();
 		    Thread.sleep(1000);
 		    LeadObjectPageObject.clk_selectlead.click();
 			Thread.sleep(1000);
@@ -87,6 +88,61 @@ public class LeadObjectPageMethod extends HomePageMethod{
 	   LeadObjectPageObject.clk_retailOnboardingOman.click();
 
 	}
+   public void ClickOnCorporateOnboarding()
+
+	{
+	   LeadObjectPageObject.clk_corporateOnboardingOman.click();
+
+	}
+   
+   public void clickAMLButton()
+
+
+   {
+		/*
+		 * JavascriptExecutor js = (JavascriptExecutor) driver;
+		 * js.executeScript("window.scrollBy(0,250)", "");
+		 *///driver.switchTo( ).alert( ).dismiss();
+	   LeadObjectPageObject.clk_ldAMLBtn.click();
+  
+
+   }
+
+public void ApprovedbyAuthorizerBtn()
+{
+	LeadObjectPageObject.clk_ldApprovedbyAuthorizerBtn.click();
+  
+
+   }
+
+public void SendtoAuthorizerBtn()
+{
+	LeadObjectPageObject.clk_ldSendtoAuthorizerBtn.click();
+  
+
+   }
+public void approvedByComplianceMaker()
+{
+	LeadObjectPageObject.clk_ldComplianceMakerBtn.click();
+  
+
+   }
+
+public void approvedByComplianceChecker()
+{
+	LeadObjectPageObject.clk_ldComplianceCheckerBtn.click();
+  
+
+   }
+
+
+
+public void clickGenerateCIFButton()
+   {
+	LeadObjectPageObject.clk_ldGenerateCIFBtn.click();
+  
+   }
+
    public void ClickOnboardCustomer()
 
  	{
@@ -94,13 +150,37 @@ public class LeadObjectPageMethod extends HomePageMethod{
 
 	   LeadObjectPageObject.clk_OnboardCustomer.click();
  	}
-   public void ClickOnAddresstab()
+   public void ClickOnNMDDtab()
 
 	{
-	   LeadObjectPageObject.clk_Addresstab.click();
+	   LeadObjectPageObject.clk_NMDDtab.click();
 
 	}
+   
+   public void ClickOnClose()
 
+  	{
+  	   LeadObjectPageObject.btn_close.click();
+
+  	}
+   
+		
+		   public void closeContact1()
+		   {
+			   LeadObjectPageObject.clk_closeContact1.click();
+			   
+			   
+			   
+		   }
+		   public void closeContact2()
+		   {
+			   LeadObjectPageObject.clk_closeContact2.click();
+			   
+			   
+			   
+		   }
+		  
+		   
 //Click on Activities tab on lead detail page
 public void ClickOnActivitiestab()
 

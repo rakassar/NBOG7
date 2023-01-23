@@ -58,7 +58,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         lopm.SwitchToParentWindow();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.SalutationID("MR.");
-        CLDLPM.CustomerName("TestLead");
+        CLDLPM.CustomerName();
         CLDLPM.DateOfBirth("29/12/1965");
         CLDLPM.IDCardNo();
         CLDLPM.IDCardExpiry();
@@ -70,7 +70,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         CLDLPM.AccountType("Call Deposit");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-        CLDLPM.ProductsAndServices("Loans and Advances");
+       // CLDLPM.ProductsAndServices("Loans and Advances");
         CLDLPM.AccountShortName("vin");
         CLDLPM.EnterMobile();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
@@ -79,7 +79,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         CLDLPM.LeadSource("Google");
         scrollBy();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.PurposeOfAccount();
+        CLDLPM.PurposeOfAccount("Loan Payments");
         CLDLPM.staffCode();
         CLDLPM.PEPStatus("Not Applicable");
         CLDLPM.Screeningmatches("Positive Match (no Financial Crime negative news)");
@@ -127,6 +127,8 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         CLDLPM.USPassport("No");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         CLDLPM.saveAndProceed();
+        CLDLPM.getStatusCode(); 
+        
         
         
 	}
@@ -142,9 +144,9 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     	CLDLPM.StandingInstructiontoTransfer("No");
     	CLDLPM.InternationalPhoneNumber("No");
-    	CLDLPM.ChangeinCircumstance("No");
+    	//CLDLPM.ChangeinCircumstance("No");
     	CLDLPM.CertificationValidity("29/12/2029");
-    	CLDLPM.CustomerLicenseownershipDetailsUpload();
+    	//CLDLPM.CustomerLicenseownershipDetailsUpload();
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     	CLDLPM.addNewResidenctCountry();
     	CLDLPM.TaxID("Yes");
@@ -154,33 +156,35 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     	CLDLPM.clickAdd();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
-    	CLDLPM.POASignatoryAuthorityControlling("No");
+    	//CLDLPM.POASignatoryAuthorityControlling("No");
     	CLDLPM.HighvalueRelationshipManagerInquiry("Not Conducted");
     	CLDLPM.ReportableAccountflag("No");
-    	CLDLPM.flagforPreexisting("No");
+    	//CLDLPM.flagforPreexisting("No");
     	CLDLPM.dateOfCRS("29/12/2001");
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
     	CLDLPM.IssuingCountry("American Samoa");
+    	Thread.sleep(3000);
     	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.saveAndProceed();
-        
-
-	}
-    
-    @Test(priority=3)
-	public void SC_001_TC_003() throws Exception
-	{
-    	Thread.sleep(4000);
-    	screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+    	CLDLPM.saveAndProceed();
+        Thread.sleep(5000);
+        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
         Thread.sleep(3000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
         Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        scrollBy();
-        Thread.sleep(1000);
+        //scrollBy();
+        CLDLPM.waitTillNextStatusCode("Verification Pending");
+        
+        
+	}
+    
+    @Test(priority=3)
+	public void SC_001_TC_003() throws Exception
+	{
+    	Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
     	CLDLPM.saveAndProceed();
     	Thread.sleep(6000);
@@ -254,7 +258,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         scrollBy();
         Thread.sleep(500);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.clickAMLButton();
+        lopm.clickAMLButton();
         Thread.sleep(1000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         lopm.ProcessApplicationPopUpClose();
@@ -277,7 +281,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         scrollBy();
         Thread.sleep(500);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.clickGenerateCIFButton();
+        lopm.clickGenerateCIFButton();
         Thread.sleep(6000);
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         lopm.ProcessApplicationPopUpClose();

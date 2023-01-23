@@ -14,8 +14,10 @@ public LeadObjectPageObject (WebDriver driver)
 }
 
 
-@FindBy(xpath="//i[@title='On board Customer']")
+@FindBy(xpath="//i[@title='Onboard Customer']")
 public static WebElement clk_OnboardCustomer ;
+
+
 
 
 @FindBy(xpath="//div[contains(@class,'form-element__control')]//div/span[contains(@data-autoid,'LE_NUMBER_ctrl')]")
@@ -36,10 +38,42 @@ public static WebElement get_leadIDCreated ;
 		public static WebElement clk_closeProcessApplicationPopup;
 
 		@FindBy(xpath="(//a[@id ='1'])[3]")
+		 public static WebElement clk_corporateOnboardingOman ;
+		
+		
+		@FindBy(xpath="//span[normalize-space()='AML Verification']")
+		public static WebElement clk_ldAMLBtn;
+
+		@FindBy(xpath="//span[normalize-space()='Approved by Authorizer']")
+		public static WebElement clk_ldApprovedbyAuthorizerBtn;
+
+
+		@FindBy(xpath="//span[normalize-space()='Send to Authorizer']")
+		public static WebElement clk_ldSendtoAuthorizerBtn;
+		
+		@FindBy(xpath="//span[normalize-space()='Approved by Compliance Maker']")
+		public static WebElement clk_ldComplianceMakerBtn;
+		
+		@FindBy(xpath="//span[normalize-space()='Approved by Compliance Checker']")
+		public static WebElement clk_ldComplianceCheckerBtn;
+
+		@FindBy(xpath="//span[normalize-space()='Generate CIF']")
+		public static WebElement clk_ldGenerateCIFBtn;
+		
+		@FindBy(id="1")
 		 public static WebElement clk_retailOnboardingOman ;
 
-		@FindBy(xpath="//span[@title = 'Address']")
-		 public static WebElement clk_Addresstab ;
+		@FindBy(xpath="//span[@title = 'NMDD']")
+		 public static WebElement clk_NMDDtab ;
+		
+		@FindBy(xpath="(//span[@class ='acd-link-text'])[6]")
+		 public static WebElement clk_closeContact1 ;
+		@FindBy(xpath="(//span[@class ='acd-link-text'])[8]")
+		 public static WebElement clk_closeContact2;
+		
+		
+		
+		
 
 	     @FindBy(xpath="//span[@title = 'Activities']")
 		 public static WebElement clk_Activitiestab ;
@@ -78,6 +112,9 @@ public static WebElement get_leadIDCreated ;
     @FindBy(xpath="//div[contains(@class,'object-action-btn')]/ul/li[2]/a/span")
     public static WebElement btn_SaveandProceed_edit;
 
+  
+    @FindBy(xpath="//span[normalize-space()='Close']")
+    public static WebElement btn_close;
 
    //searching  functionality for lead
     @FindBy(id="lnkadvance")
