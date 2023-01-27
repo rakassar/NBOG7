@@ -12,6 +12,7 @@ import BUSINESSNEXT.NBOG7.OBJECT.*;
 public class LeadObjectPageMethod extends HomePageMethod{
 
    public static String leadid;
+   public static String AmlCheckvalue;
    
    public void GetLeadId()
 	  {
@@ -220,15 +221,7 @@ public void ClickOnActivitiestab()
 	   LeadObjectPageObject.clk_BmApproveBttn.click();
 	   Thread.sleep(1000);
 	}
-   public void TustOpsConvertLeadCLK() throws InterruptedException
-
-	{
-	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
-
-	   LeadObjectPageObject.clk_TustOpsConvertLead.click();
-	   Thread.sleep(1000);
-	}
-
+  
 
 
    public void SwitchToSecondaryWindow()
@@ -278,7 +271,7 @@ public void ClickOnActivitiestab()
    	sel1.selectByVisibleText(popupdt360);
    }
 
-   public void ProcessApplicationPopUpClose()
+   public void RecordupdatePopUpConfirmation()
 
 	{
 	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
@@ -287,22 +280,6 @@ public void ClickOnActivitiestab()
 
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -383,6 +360,29 @@ public void ClickOnOnBoardingJourneyNonIndi()
    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
 	driver.findElements(By.id("1")).get(2).click();
   // LeadObjectPageObject.clk_salesonbaordingjourney.get(2).click();;
+}
+
+
+public void ClickAMLResponse()
+
+{
+	AmlCheckvalue=LeadObjectPageObject.txt_AML_Check.getText();
+	System.out.print(AmlCheckvalue);
+	
+}
+
+
+public void VerifiedbyCheckerBtn()
+
+
+{
+		/*
+		 * JavascriptExecutor js = (JavascriptExecutor) driver;
+		 * js.executeScript("window.scrollBy(0,250)", "");
+		 *///driver.switchTo( ).alert( ).dismiss();
+	   LeadObjectPageObject.btn_VerifiedbyChecker.click();
+
+
 }
 
 }

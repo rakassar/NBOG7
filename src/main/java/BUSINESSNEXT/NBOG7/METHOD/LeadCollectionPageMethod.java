@@ -659,7 +659,7 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		  }   while(Leadstatus.equalsIgnoreCase(nextstatuscode));
 		  
 	   }
-		  
+	  
 	   
 	 public void USTax(String type)
 	    {
@@ -1836,7 +1836,7 @@ public void AttachProofClick() throws InterruptedException {
 		    }
 
 
-              public void clickClosePopup()
+              public void NotificationPOPUPClose()
 
 
 		    {

@@ -44,6 +44,10 @@ public static WebElement get_leadIDCreated ;
 		@FindBy(xpath="//span[normalize-space()='AML Verification']")
 		public static WebElement clk_ldAMLBtn;
 
+
+		@FindBy(xpath="//span[normalize-space()='Verified by Checker")
+		public static WebElement btn_VerifiedbyChecker;
+		
 		@FindBy(xpath="//span[normalize-space()='Approved by Authorizer']")
 		public static WebElement clk_ldApprovedbyAuthorizerBtn;
 
@@ -149,8 +153,8 @@ public static WebElement get_leadIDCreated ;
 	public static WebElement clk_BmComments;
     
   //Trust Ops convert lead
-    @FindBy(xpath="//span[normalize-space()='Convert Lead']")
-	public static WebElement clk_TustOpsConvertLead;
+    @FindBy(css="span[data-autoid='cust_110001_ctrl']")
+	public static WebElement txt_AML_Check;
     
     
 

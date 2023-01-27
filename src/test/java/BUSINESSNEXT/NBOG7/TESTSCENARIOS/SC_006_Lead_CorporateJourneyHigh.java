@@ -267,7 +267,7 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 	public void SC_001_TC_006() throws Exception {
 		Thread.sleep(3000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		Thread.sleep(1000);
 		lopm.GetLeadId();
 		scrollBy();
@@ -317,7 +317,7 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		lopm.onMyBucketlead();
 		Thread.sleep(2000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
 		Thread.sleep(500);
@@ -337,10 +337,10 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		lopm.clickAMLButton();
 		Thread.sleep(1000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		lopm.ProcessApplicationPopUpClose();
+		lopm.RecordupdatePopUpConfirmation();
 		Thread.sleep(1000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 
 		lopm.ClickOnNMDDtab();
@@ -394,7 +394,7 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		lopm.SendtoAuthorizerBtn();
 		Thread.sleep(1000);
-		lopm.ProcessApplicationPopUpClose();
+		lopm.RecordupdatePopUpConfirmation();
 		Thread.sleep(1000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		QuiteBrowser();
@@ -425,7 +425,7 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		lopm.onMyBucketlead();
 		Thread.sleep(2000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
 		Thread.sleep(500);
@@ -445,10 +445,10 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		lopm.ApprovedbyAuthorizerBtn();
 		Thread.sleep(1000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		lopm.ProcessApplicationPopUpClose();
+		lopm.RecordupdatePopUpConfirmation();
 		Thread.sleep(1000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
 		Thread.sleep(500);
@@ -494,7 +494,7 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		lopm.onMyBucketlead();
 		Thread.sleep(2000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
 		Thread.sleep(500);
@@ -518,9 +518,9 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		CLDLPM.clickUpdate();
 		Thread.sleep(2000);
-		lopm.ProcessApplicationPopUpClose();
+		lopm.RecordupdatePopUpConfirmation();
 		Thread.sleep(2000);
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
 		Thread.sleep(500);
@@ -566,7 +566,7 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		lopm.onMyBucketlead();
 		Thread.sleep(2000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
 		Thread.sleep(500);
@@ -586,9 +586,9 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		lopm.approvedByComplianceChecker();
 		Thread.sleep(2000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		lopm.ProcessApplicationPopUpClose();
+		lopm.RecordupdatePopUpConfirmation();
 		Thread.sleep(2000);
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
 		Thread.sleep(500);
@@ -634,7 +634,7 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		lopm.onMyBucketlead();
 		Thread.sleep(2000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
 		Thread.sleep(500);
@@ -654,10 +654,10 @@ public class SC_006_Lead_CorporateJourneyHigh extends HomePageMethod {
 		lopm.clickGenerateCIFButton();
 		Thread.sleep(1000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		lopm.ProcessApplicationPopUpClose();
+		lopm.RecordupdatePopUpConfirmation();
 		Thread.sleep(1000);
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-		CLDLPM.clickClosePopup();
+		CLDLPM.NotificationPOPUPClose();
 		screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 		scrollBy();
 		Thread.sleep(500);
