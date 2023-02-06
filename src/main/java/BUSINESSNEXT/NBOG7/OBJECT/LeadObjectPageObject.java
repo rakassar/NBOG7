@@ -44,8 +44,8 @@ public static WebElement get_leadIDCreated ;
 		@FindBy(xpath="//span[normalize-space()='AML Verification']")
 		public static WebElement clk_ldAMLBtn;
 
-
-		@FindBy(xpath="//span[normalize-space()='Verified by Checker")
+		
+		@FindBy(xpath="//span[normalize-space()='Verified by Checker']")
 		public static WebElement btn_VerifiedbyChecker;
 		
 		@FindBy(xpath="//span[normalize-space()='Approved by Authorizer']")
@@ -69,6 +69,9 @@ public static WebElement get_leadIDCreated ;
 
 		@FindBy(xpath="//span[@title = 'NMDD']")
 		 public static WebElement clk_NMDDtab ;
+		
+		@FindBy(xpath="//span[@title='Details (Corporate)']")
+		 public static WebElement clk_DetailsCoporate ;
 		
 		@FindBy(xpath="(//span[@class ='acd-link-text'])[6]")
 		 public static WebElement clk_closeContact1 ;
@@ -155,6 +158,23 @@ public static WebElement get_leadIDCreated ;
   //Trust Ops convert lead
     @FindBy(css="span[data-autoid='cust_110001_ctrl']")
 	public static WebElement txt_AML_Check;
+    
+    //Contacts IDs
+    @FindBy(xpath="//span//div[@data-autoid='ContactID_0']")
+	public static WebElement get_comntactId1;
+    //Contacts IDs
+    @FindBy(xpath="//span//div[@data-autoid='ContactID_1']")
+	public static WebElement get_comntactId2;
+    
+    
+  //Contacts IDs
+    @FindBy(xpath="//span//div[@data-autoid='Con_ex2_88_0']")
+	public static WebElement get_comntactId1amlcheck;
+    
+  //Contacts IDs
+    @FindBy(xpath="//span//div[@data-autoid='Con_ex2_88_1']")
+	public static WebElement get_comntactId2amlcheck;
+    
     
     
 

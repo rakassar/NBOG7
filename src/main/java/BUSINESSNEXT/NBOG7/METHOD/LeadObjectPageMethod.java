@@ -13,6 +13,11 @@ public class LeadObjectPageMethod extends HomePageMethod{
 
    public static String leadid;
    public static String AmlCheckvalue;
+   public static String contactid1;
+   public static String contactid2;
+   public static String contactid1amlcheck;
+   public static String contactid2amlcheck;
+   
    
    public void GetLeadId()
 	  {
@@ -155,6 +160,13 @@ public void clickGenerateCIFButton()
 
 	{
 	   LeadObjectPageObject.clk_NMDDtab.click();
+
+	}
+   
+   public void DetailsCorporate()
+
+	{
+	   LeadObjectPageObject.clk_DetailsCoporate.click();
 
 	}
    
@@ -367,7 +379,7 @@ public void ClickAMLResponse()
 
 {
 	AmlCheckvalue=LeadObjectPageObject.txt_AML_Check.getText();
-	System.out.print(AmlCheckvalue);
+	System.out.println(AmlCheckvalue);
 	
 }
 
@@ -384,5 +396,27 @@ public void VerifiedbyCheckerBtn()
 
 
 }
+
+
+public void GetContactIds()
+
+	{
+	   contactid1=LeadObjectPageObject.get_comntactId1.getText();
+	   contactid2=LeadObjectPageObject.get_comntactId2.getText();
+	   System.out.println("ContactId1:"+contactid1);
+	   System.out.println("ContactId2:"+contactid2);
+
+	}
+
+public void GetAMLResponseForContacts()
+
+{
+	contactid1amlcheck=LeadObjectPageObject.get_comntactId1amlcheck.getText();
+	contactid2amlcheck=LeadObjectPageObject.get_comntactId2amlcheck.getText();
+   System.out.println("ContactId1:"+contactid1amlcheck);
+   System.out.println("ContactId2:"+contactid2amlcheck);
+
+}
+ 
 
 }
