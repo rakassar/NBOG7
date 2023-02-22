@@ -64,6 +64,12 @@ public static WebElement get_leadIDCreated ;
 		@FindBy(xpath="//span[normalize-space()='Generate CIF']")
 		public static WebElement clk_ldGenerateCIFBtn;
 		
+		@FindBy(xpath="//a[normalize-space()='Retail KYC Refresh- Oman']")
+		public static WebElement btn_retailKYC;
+		
+		@FindBy(xpath="//a[normalize-space()='Corporate KYC Refresh- Oman']")
+		public static WebElement btn_corporateKYC;
+		
 		@FindBy(id="1")
 		 public static WebElement clk_retailOnboardingOman ;
 
@@ -189,7 +195,10 @@ public static WebElement get_leadIDCreated ;
     
 
     @FindBy(name="m$bs$bf")
-    public static WebElement clk_finish; 
+    public static WebElement clk_finish;
+    
+    @FindBy(xpath="//a[@data-autoid = 'LE_COMPANY_ctrl']")
+    public static WebElement clk_goToCustomer360;
 
 
 

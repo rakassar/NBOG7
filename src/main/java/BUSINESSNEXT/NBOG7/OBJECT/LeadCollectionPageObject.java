@@ -111,6 +111,9 @@ public static WebElement clk_PSpicker;
 public static WebElement ent_ldPSsearchBox;
 
 
+@FindBy(name="cust_125817")
+public static WebElement ent_wishToUpdateInfo;
+
 @FindBy(xpath="//div[@data-autoid='Product_type_name_0']")
 public static WebElement clk_ldPSproductselect;
 
@@ -855,5 +858,37 @@ public static WebElement get_leadStatusCode;
 
 @FindBy(xpath="//span[normalize-space()='Next']")
 public static WebElement clk_Next ;
+
+@FindBy(name="cust_125822")
+public static WebElement sel_ldCashTransactions;
+
+@FindBy(name="cust_125823")
+public static WebElement sel_ldCustomerIsInLineWithProfile;
+
+@FindBy(name="cust_125833")
+public static WebElement sel_ldpPrformedOnCustomer;
+
+@FindBy(name="cust_125830")
+public static WebElement sel_ldAssociatedWithCustomer;
+
+@FindBy(name="cust_125832")
+public static WebElement sel_ldUtilizedForCmmrcialActivity;
+
+
+@FindBy(xpath="//input[@data-autoid='cust_112566_ctrl']")
+public static WebElement ent_TRNRegistrationDate ;
+
+
+@FindBy(xpath="//input[@data-autoid='cust_2201_ctrl']")
+public static WebElement ent_DateOfJoining;
+
+
+@FindBy(name="cust_124704")
+public static WebElement sel_existingHighValueIndividuals;
+
+
+@FindBy(name="cust_124932")
+public static WebElement sel_updateFATCAInfo;
+
 
 }

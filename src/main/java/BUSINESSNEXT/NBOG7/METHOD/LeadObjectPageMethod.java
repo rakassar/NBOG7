@@ -149,6 +149,17 @@ public void clickGenerateCIFButton()
 	LeadObjectPageObject.clk_ldGenerateCIFBtn.click();
   
    }
+public void clickRetailKYCButton()
+{
+	LeadObjectPageObject.btn_retailKYC.click();
+
+}
+
+public void clickCorporateKYCButton()
+{
+	LeadObjectPageObject.btn_corporateKYC.click();
+
+}
 
    public void ClickOnboardCustomer()
 
@@ -443,6 +454,14 @@ public void clk_importButton() throws InterruptedException
 
     Thread.sleep(1000);
 	LeadObjectPageObject.clk_importbutton.click();
+    Thread.sleep(1000);
+}
+public void goToCustomer360() throws InterruptedException
+
+{
+
+    Thread.sleep(1000);
+	LeadObjectPageObject.clk_goToCustomer360.click();
     Thread.sleep(1000);
 }
 

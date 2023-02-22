@@ -135,9 +135,28 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	    	sel.selectByVisibleText(type);
 	    	Thread.sleep(1000);
 	    }
+	 
+	 public void wishToUpdateInfo(String type) throws InterruptedException
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.ent_wishToUpdateInfo);
+	    	//sel.selectByValue(Product);
+	    	sel.selectByVisibleText(type);
+	    	Thread.sleep(1000);
+	    }
+	 
 	 public void dateOfRegistration(String type)
 	    {
 	    	LeadCollectionPageObject.ent_ldDateofRegistration.sendKeys( type);
+	    }
+	 
+	 public void TRNRegistrationDate(String type)
+	    {
+	    	LeadCollectionPageObject.ent_TRNRegistrationDate.sendKeys( type);
+	    }
+	 
+	 public void DateOfJoining(String type)
+	    {
+	    	LeadCollectionPageObject.ent_DateOfJoining.sendKeys( type);
 	    }
 	 
 	 public void placeOfRegistration(String type)
@@ -1142,6 +1161,36 @@ public void AttachProofClick() throws InterruptedException {
 	    	sel.selectByVisibleText(type);
 	    }
 	 
+	 public void CashTransactions(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldCashTransactions);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void CustomerIsInLineWithProfile(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldCustomerIsInLineWithProfile);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void PrformedOnCustomer(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldpPrformedOnCustomer);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void AssociatedWithCustomer(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldAssociatedWithCustomer);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
+	 public void UtilizedForCmmrcialActivity(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldUtilizedForCmmrcialActivity);
+	    	sel.selectByVisibleText(type);
+	    }
+	 
 	 
 	 public void dateOfCRS(String date)
 		{
@@ -2021,6 +2070,18 @@ public void AttachProofClick() throws InterruptedException {
 
 
   		    }
+              public void existingHighValueIndividuals(String padassameprad) throws InterruptedException
+    		    {
+    		    	Select sel1 = new Select(LeadCollectionPageObject.sel_existingHighValueIndividuals);
+    		    	sel1.selectByVisibleText(padassameprad);
+    		    }
+              public void updateFATCAInfo(String padassameprad) throws InterruptedException
+    		    {
+    		    	Select sel1 = new Select(LeadCollectionPageObject.sel_updateFATCAInfo);
+    		    	sel1.selectByVisibleText(padassameprad);
+
+
+    		    }
 
 
 
