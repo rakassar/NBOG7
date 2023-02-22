@@ -66,7 +66,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
         lopm.ClickOnCorporateOnboarding();
         lopm.SwitchToParentWindow();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.customerSegment("Retail Banking - Mass");
+        //CLDLPM.customerSegment("Retail Banking - Mass");
         CLDLPM.companyName();
         CLDLPM.shortName("vin");
         CLDLPM.DateOfEstablishment("29/12/1965");
@@ -178,7 +178,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     	CLDLPM.addNewAuthorizedSignatory();
     	CLDLPM.Associatedpartytype("Authorized Signatory");
     	CLDLPM.Title("MR.");
-    	CLDLPM.NameField("vISHAL");
+    	CLDLPM.NameField("VISHAL");
     	CLDLPM.countryofIncorporation("AMERICAN SAMOA"); 
     	CLDLPM.ResidenceCountry("AMERICAN SAMOA");
     	CLDLPM.PEPStatusCorporate("Not Applicable");
@@ -188,7 +188,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
     	
     	CLDLPM.addNewAuthorizedSignatory();
     	CLDLPM.Associatedpartytype("UBO");
-    	CLDLPM.NameField("vISHAL");
+    	CLDLPM.NameField("VISHAL");
     	CLDLPM.countryofIncorporation("AMERICAN SAMOA");
     	CLDLPM.TypeOfUBO("Individual");
     	CLDLPM.ResidenceCountry("AMERICAN SAMOA");
@@ -267,8 +267,9 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
               lopm.GetLeadId();
               lopm.ClickAMLResponse();
               CLDLPM.getStatusCode();
+              CLDLPM.getriskcategory();
               
-              if (LeadCollectionPageMethod.Leadstatus.equals("Verification Pending") && LeadObjectPageMethod.AmlCheckvalue.equals(""))
+              if (LeadCollectionPageMethod.Leadstatus.equalsIgnoreCase("Verification Pending") && LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase(""))
               {
               	
             
@@ -295,7 +296,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
                   lopm.RecordupdatePopUpConfirmation();
                   Thread.sleep(1000);
                   screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-                  CLDLPM.NotificationPOPUPClose();
+                  //CLDLPM.NotificationPOPUPClose();
                   screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
                   lopm.ClickAMLResponse();
                   
@@ -308,7 +309,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
                  
                    
                  
-                  if (LeadObjectPageMethod.AmlCheckvalue.equals("Match Found") || LeadObjectPageMethod.AmlCheckvalue.equals("Pending with AML")||LeadObjectPageMethod.AmlCheckvalue.equals(""))
+                  if (LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Match Found") || LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Pending with AML")||LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase(""))
                   
                   { 
                   	token.Token();
@@ -324,7 +325,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
                   lopm.GetContactIds();
                   lopm.GetAMLResponseForContacts();
                   
-                  if (LeadObjectPageMethod.contactid1amlcheck.equals("Match Found") || LeadObjectPageMethod.contactid1amlcheck.equals("Pending with AML")||LeadObjectPageMethod.contactid1amlcheck.equals("")||LeadObjectPageMethod.contactid1amlcheck.equals("AML Checked"))
+                  if (LeadObjectPageMethod.contactid1amlcheck.equalsIgnoreCase("Match Found") || LeadObjectPageMethod.contactid1amlcheck.equalsIgnoreCase("Pending with AML")||LeadObjectPageMethod.contactid1amlcheck.equalsIgnoreCase("")||LeadObjectPageMethod.contactid1amlcheck.equalsIgnoreCase("AML Checked"))
                       
                    {   
                   	token.Token();
@@ -340,15 +341,87 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
                   lopm.ClickAMLResponse();
                   lopm.ClickOnNMDDtab(); 
                   lopm.GetAMLResponseForContacts();
-                  if (LeadObjectPageMethod.AmlCheckvalue.equals("Match Not Found") && LeadObjectPageMethod.contactid1amlcheck.equals("Match Not Found"))
-                     	
+                  if (LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Match Not Found") && LeadObjectPageMethod.contactid1amlcheck.equalsIgnoreCase("Match Not Found"))
                   {   
+		              
+		              if (LeadCollectionPageMethod.riskcategory.equalsIgnoreCase("Low"))  	
+                       {   
                      	Refresh();
                      	lopm.VerifiedbyCheckerBtn();
                      	lopm.RecordupdatePopUpConfirmation();
                      	
-                     		
-                   }
+
+  	                     Thread.sleep(1000);
+  	
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	          CLDLPM.NotificationPOPUPClose();
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			  	           Thread.sleep(500);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			  	           Thread.sleep(500);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			  	           Thread.sleep(500);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			  	           Thread.sleep(500);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           lopm.clickGenerateCIFButton();
+			  	           Thread.sleep(10000);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           lopm.RecordupdatePopUpConfirmation();
+			  	           Thread.sleep(6000);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           CLDLPM.NotificationPOPUPClose();
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			  	           Thread.sleep(500);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			  	           Thread.sleep(500);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			  	           Thread.sleep(500);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			  	           Thread.sleep(500);
+			  	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+			  	           scrollBy();
+			                     		
+                          }
+					              
+					              else
+					            	  
+					              {
+					            	Refresh();
+					               	lopm.SendtoAuthorizerBtn();
+					               	lopm.RecordupdatePopUpConfirmation();
+					               	
+					                scrollBy();
+							        Thread.sleep(500);
+							        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+							        scrollBy();
+							        Thread.sleep(500);
+							        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+							        scrollBy();
+							        Thread.sleep(500);
+							        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+							        scrollBy();
+							        Thread.sleep(500);
+							        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+							        scrollBy();
+							        Thread.sleep(500);
+							        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+							        CLDLPM.NotificationPOPUPClose();
+							        Thread.sleep(500);
+							        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+							      
+					              }
+                        }  
                   
 				            
 				           
@@ -370,58 +443,18 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
 				   		 * lopm.SwitchToParentWindow(); Refresh();
 				   		 */        
 	                  
-	                  Thread.sleep(1000);
-	
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	          CLDLPM.NotificationPOPUPClose();
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
-	           Thread.sleep(500);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
-	           Thread.sleep(500);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
-	           Thread.sleep(500);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
-	           Thread.sleep(500);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           lopm.clickGenerateCIFButton();
-	           Thread.sleep(10000);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           lopm.RecordupdatePopUpConfirmation();
-	           Thread.sleep(6000);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           CLDLPM.NotificationPOPUPClose();
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
-	           Thread.sleep(500);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
-	           Thread.sleep(500);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
-	           Thread.sleep(500);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
-	           Thread.sleep(500);
-	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-	           scrollBy();
            
 
    	          }
               
           CLDLPM.getStatusCode();
           
-          if (LeadCollectionPageMethod.Leadstatus.equals("Verification Pending"))
+          if (LeadCollectionPageMethod.Leadstatus.equalsIgnoreCase("Verification Pending"))
               {
             	  
               
             	  
-                   if (LeadObjectPageMethod.AmlCheckvalue.equals("Match Found") || LeadObjectPageMethod.AmlCheckvalue.equals("Pending with AML")||LeadObjectPageMethod.AmlCheckvalue.equals(""))
+                   if (LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Match Found") || LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Pending with AML")||LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase(""))
                   
                     {   
                   	token.Token();
@@ -431,12 +464,12 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
                   	lopm.RecordupdatePopUpConfirmation();
                   	
                    }
-                 // CLDLPM.NotificationPOPUPClose();
+                   CLDLPM.NotificationPOPUPClose();
                    lopm.ClickOnNMDDtab();   
                    lopm.GetContactIds();
                    lopm.GetAMLResponseForContacts();
                   
-                  if (LeadObjectPageMethod.contactid1amlcheck.equals("Match Found") || LeadObjectPageMethod.contactid1amlcheck.equals("Pending with AML")||LeadObjectPageMethod.contactid1amlcheck.equals("")||LeadObjectPageMethod.contactid1amlcheck.equals("AML Checked"))
+                  if (LeadObjectPageMethod.contactid1amlcheck.equalsIgnoreCase("Match Found") || LeadObjectPageMethod.contactid1amlcheck.equalsIgnoreCase("Pending with AML")||LeadObjectPageMethod.contactid1amlcheck.equalsIgnoreCase("")||LeadObjectPageMethod.contactid1amlcheck.equalsIgnoreCase("AML Checked"))
                       
                    {   
                   	token.Token();
@@ -452,16 +485,85 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
                     lopm.ClickAMLResponse();
                     lopm.ClickOnNMDDtab(); 
                     lopm.GetAMLResponseForContacts();
-                    if (LeadObjectPageMethod.AmlCheckvalue.equals("Match Not Found") && LeadObjectPageMethod.AmlCheckvalue.equals("Match Not Found"))
+                    if (LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Match Not Found") && LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Match Not Found"))
                      	
-                     {   
+                     {  
+                      if (LeadCollectionPageMethod.riskcategory.equalsIgnoreCase("Low"))
+  		            	  
+  		              {
                      	Refresh();
                      	lopm.VerifiedbyCheckerBtn();
                      	lopm.RecordupdatePopUpConfirmation();
-                     	
+                     	 Thread.sleep(1000);
+             			
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           CLDLPM.NotificationPOPUPClose();
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
+  			           Thread.sleep(500);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
+  			           Thread.sleep(500);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
+  			           Thread.sleep(500);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
+  			           Thread.sleep(500);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           lopm.clickGenerateCIFButton();
+  			           Thread.sleep(10000);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           lopm.RecordupdatePopUpConfirmation();
+  			           Thread.sleep(6000);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           CLDLPM.NotificationPOPUPClose();
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
+  			           Thread.sleep(500);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
+  			           Thread.sleep(500);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
+  			           Thread.sleep(500);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
+  			           Thread.sleep(500);
+  			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+  			           scrollBy();
                      		
                      }
-                  
+                  else
+		            	  
+		              {
+		            	Refresh();
+		               	lopm.SendtoAuthorizerBtn();
+		               	lopm.RecordupdatePopUpConfirmation();
+		               	
+		                scrollBy();
+				        Thread.sleep(500);
+				        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+				        scrollBy();
+				        Thread.sleep(500);
+				        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+				        scrollBy();
+				        Thread.sleep(500);
+				        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+				        scrollBy();
+				        Thread.sleep(500);
+				        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+				        scrollBy();
+				        Thread.sleep(500);
+				        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+				        CLDLPM.NotificationPOPUPClose();
+				        Thread.sleep(500);
+				        screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
+				      
+		              }
+
 			            
 			           
 			           //Clcik On Nmdd Tab
@@ -482,50 +584,11 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
 			   		 * lopm.SwitchToParentWindow(); Refresh();
 			   		 */        
 			                  
-			           Thread.sleep(1000);
-			
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           CLDLPM.NotificationPOPUPClose();
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
-			           Thread.sleep(500);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
-			           Thread.sleep(500);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
-			           Thread.sleep(500);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
-			           Thread.sleep(500);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           lopm.clickGenerateCIFButton();
-			           Thread.sleep(10000);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           lopm.RecordupdatePopUpConfirmation();
-			           Thread.sleep(6000);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           CLDLPM.NotificationPOPUPClose();
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
-			           Thread.sleep(500);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
-			           Thread.sleep(500);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
-			           Thread.sleep(500);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
-			           Thread.sleep(500);
-			           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			           scrollBy();
+                     }    
            
               }
           
-          if  (LeadCollectionPageMethod.Leadstatus.equals("Pending at Checker"))
+          if  (LeadCollectionPageMethod.Leadstatus.equalsIgnoreCase("Pending at Checker"))
         	  
           {
         	  Thread.sleep(1000);
@@ -568,6 +631,7 @@ import BUSINESSNEXT.NBOG7.METHOD.*;
 	           Thread.sleep(500);
 	           screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 	           scrollBy();
+	           CLDLPM.getStatusCode();
            }
           else 
            	   

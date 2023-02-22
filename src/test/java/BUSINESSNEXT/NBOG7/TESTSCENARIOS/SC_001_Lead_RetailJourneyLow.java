@@ -86,7 +86,7 @@ import BUSINESSNEXT.NBOG7.API.TokenGeneration;
         CLDLPM.LeadSource("Google");
         scrollBy();
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-        CLDLPM.PurposeOfAccount("Loan Payments");
+        CLDLPM.PurposeOfAccount("Brokerage (if applicable)");
         CLDLPM.staffCode();
         CLDLPM.PEPStatus("Not Applicable");
         CLDLPM.Screeningmatches("Positive Match (no Financial Crime negative news)");
@@ -94,6 +94,7 @@ import BUSINESSNEXT.NBOG7.API.TokenGeneration;
         CLDLPM.CaptureAssociatedPartyInfo("No");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
+       // CLDLPM.customerSegment("Private");
         CLDLPM.Surname("bishal");
         screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
         scrollBy();
@@ -224,6 +225,7 @@ import BUSINESSNEXT.NBOG7.API.TokenGeneration;
     	
 	}
 
+
     @Test(priority=4)
 	public void SC_001_TC_004() throws Exception
 	{
@@ -255,10 +257,10 @@ import BUSINESSNEXT.NBOG7.API.TokenGeneration;
         lopm.ClickAMLResponse();
         CLDLPM.getStatusCode();
         
-        if (LeadCollectionPageMethod.Leadstatus.equals("Verification Pending"))
+        if (LeadCollectionPageMethod.Leadstatus.equalsIgnoreCase("Verification Pending"))
         {
 			        	
-			        	if (LeadCollectionPageMethod.Leadstatus.equals("Verification Pending") && LeadObjectPageMethod.AmlCheckvalue.equals(""))
+			        	if (LeadCollectionPageMethod.Leadstatus.equalsIgnoreCase("Verification Pending") && LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase(""))
 			            {
 			             	
 			        	CLDLPM.NotificationPOPUPClose();
@@ -284,13 +286,13 @@ import BUSINESSNEXT.NBOG7.API.TokenGeneration;
 			            lopm.RecordupdatePopUpConfirmation();
 			            Thread.sleep(1000);
 			            screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
-			            CLDLPM.NotificationPOPUPClose();
+			          //  CLDLPM.NotificationPOPUPClose();
 			            screen.ScreenshotMethod("SC_001_Lead_RetailJourneyLow-");
 			            lopm.ClickAMLResponse();
 			            
 			            
 			
-			            if (LeadObjectPageMethod.AmlCheckvalue.equals("Match Found") || LeadObjectPageMethod.AmlCheckvalue.equals("Pending with AML")||LeadObjectPageMethod.AmlCheckvalue.equals(""))
+			            if (LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Match Found") || LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Pending with AML")||LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase(""))
 			            
 			            { 
 			            	token.Token();
@@ -304,11 +306,11 @@ import BUSINESSNEXT.NBOG7.API.TokenGeneration;
 			             // lopm.DetailsCorporate();
 			             lopm.ClickAMLResponse();
 			           
-			              if (LeadObjectPageMethod.AmlCheckvalue.equals("Match Not Found"))
+			              if (LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Match Not Found"))
 			               	
 			               {   
 			              
-			              if (LeadCollectionPageMethod.riskcategory.equals("Low"))
+			              if (LeadCollectionPageMethod.riskcategory.equalsIgnoreCase("Low"))
 			            	  
 			              {
 			            	  Refresh();
@@ -395,10 +397,10 @@ import BUSINESSNEXT.NBOG7.API.TokenGeneration;
         
        CLDLPM.getStatusCode();
         	 
-       if (LeadCollectionPageMethod.Leadstatus.equals("Verification Pending"))
+       if (LeadCollectionPageMethod.Leadstatus.equalsIgnoreCase("Verification Pending"))
        {
  
-            	if (LeadObjectPageMethod.AmlCheckvalue.equals("Match Found") || LeadObjectPageMethod.AmlCheckvalue.equals("Pending with AML")||LeadObjectPageMethod.AmlCheckvalue.equals(""))
+            	if (LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Match Found") || LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Pending with AML")||LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase(""))
             
             	{ 
             	token.Token();
@@ -412,10 +414,10 @@ import BUSINESSNEXT.NBOG7.API.TokenGeneration;
             	//lopm.DetailsCorporate();
             	lopm.ClickAMLResponse();
            
-            	if (LeadObjectPageMethod.AmlCheckvalue.equals("Match Not Found") )
+            	if (LeadObjectPageMethod.AmlCheckvalue.equalsIgnoreCase("Match Not Found") )
             	{
                	
-            		 if (LeadCollectionPageMethod.riskcategory.equals("Low"))
+            		 if (LeadCollectionPageMethod.riskcategory.equalsIgnoreCase("Low"))
 		            	  
 		              {
 		            	  Refresh();
@@ -498,7 +500,7 @@ import BUSINESSNEXT.NBOG7.API.TokenGeneration;
        
     CLDLPM.getStatusCode();
         	 
-    if (LeadCollectionPageMethod.Leadstatus.equals("Pending at Checker") && LeadCollectionPageMethod.riskcategory.equals("Low"))
+    if (LeadCollectionPageMethod.Leadstatus.equalsIgnoreCase("Pending at Checker") && LeadCollectionPageMethod.riskcategory.equalsIgnoreCase("Low"))
        
     {
        

@@ -32,7 +32,6 @@ public static WebElement ent_ldcustomerName;
 @FindBy(name="cust_44")
 public static WebElement ent_ldcompanyName;
 
-
 @FindBy(xpath="//input[@data-autoid = 'cust_580_ctrl']")
 public static WebElement ent_ldDateofBirth;
 
@@ -443,7 +442,7 @@ public static WebElement sel_ldIntstInHighRiskIndustry;
 public static WebElement sel_ldBusinessInHighRisk;
 
 @FindBy(name="cust_124641")
-public static WebElement sel_ldManagaedByNaturalPerson;
+public static WebElement sel_Sendmoneytocountry;
 
 @FindBy(name="cust_124643")
 public static WebElement sel_ldIES;
@@ -852,4 +851,9 @@ public static WebElement sel_ldperaddaspreaddNonIndi;
 
 @FindBy(xpath="//span[@data-autoid= 'LE_STATUSCODE_ctrl']")
 public static WebElement get_leadStatusCode;
+
+
+@FindBy(xpath="//span[normalize-space()='Next']")
+public static WebElement clk_Next ;
+
 }

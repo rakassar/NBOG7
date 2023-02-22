@@ -7,6 +7,7 @@ import BUSINESSNEXT.NBOG7.COMMON.*;
 import BUSINESSNEXT.NBOG7.METHOD.*;
 import BUSINESSNEXT.NBOG7.OBJECT.*;
 
+
 public class HomePageMethod extends LoginPageMethod{
 
 	//quick link and sales widget
@@ -17,6 +18,19 @@ public class HomePageMethod extends LoginPageMethod{
 
 	}
 
+   
+   public void ClickMDMWidget() throws InterruptedException
+
+	{
+		/*
+		 * Thread.sleep(1000); HomePageObject.clk_mdmswidget.click();;
+		 * Thread.sleep(1000);
+		 */
+	
+	Actions quick = new Actions(driver);
+	quick.moveToElement(HomePageObject.clk_mdmswidget).perform();
+	}
+   
    public void clk_leadobject() throws InterruptedException
 
 	{
@@ -117,6 +131,19 @@ public void scrollBy()
        //till page end
        //js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
        }
+
+			public void ClickMDMRelationShipmethod() throws InterruptedException
+			
+			{
+				/*
+				 * Thread.sleep(1000); HomePageObject.clk_mdmswidget.click();;
+				 * Thread.sleep(1000);
+				 */
+			
+			Actions quick = new Actions(driver);
+			quick.moveToElement(HomePageObject.clk_mdmrelationshipmethod).perform();
+			 HomePageObject.clk_mdmrelationshipmethod.click();;
+			}
 
 
 }

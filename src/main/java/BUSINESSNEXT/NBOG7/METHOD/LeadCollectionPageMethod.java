@@ -446,6 +446,10 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 Thread.sleep(1000);
 	 }
 	 
+	 
+
+
+	 
 	 public void HNWIStatus(String type)
 	    {
 	    	Select sel=new Select(LeadCollectionPageObject.sel_ldHNWIStatus);
@@ -651,9 +655,10 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 			clients.sendKeys(Keys.ENTER);
 			}
 	 public void ResidenceCountry(String salesID) throws InterruptedException
-	    {			Thread.sleep(500);
-
-	    	WebElement clients= LeadCollectionPageObject.SEL_ldResidenceCountry;
+	    {			
+		 
+		    Thread.sleep(1000);
+		    WebElement clients= LeadCollectionPageObject.SEL_ldResidenceCountry;
 	    	clients.sendKeys(salesID);
 			Thread.sleep(1000);
 			clients.sendKeys(Keys.ARROW_DOWN);
@@ -734,6 +739,16 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
            Thread.sleep(1000);
 		 LeadCollectionPageObject.clk_saveandproceed.click();
 	 	}
+	 
+	 
+	 public void clickknext() throws InterruptedException
+
+	 	{
+	 	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+        Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_Next.click();
+	 	}
+	 
 	 
 	 
 //high risk form
@@ -1004,6 +1019,12 @@ public void AttachProofClick() throws InterruptedException {
 	    	sel.selectByVisibleText(type);
 	    }
 	 
+	 
+	 public void Sendmoneytocountry(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_Sendmoneytocountry);
+	    	sel.selectByVisibleText(type);
+	    }
 	 public void ManagaedByNaturalPerson(String type)
 	    {
 	    	Select sel=new Select(LeadCollectionPageObject.sel_ldRCVOrSndMoney);

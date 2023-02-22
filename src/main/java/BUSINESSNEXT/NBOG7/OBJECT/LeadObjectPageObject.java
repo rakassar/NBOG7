@@ -99,6 +99,9 @@ public static WebElement get_leadIDCreated ;
 	     @FindBy(xpath="//label[@for='checkbox0']")
 	     public static WebElement clk_selectlead ;
 
+	     @FindBy(css="#select-all-checkbox")
+	     public static WebElement sel_alldata ;
+	     
 	     @FindBy(css="[data-autoid='LeadID_0']")
 	     public static WebElement clk_selectthelead ;
 
@@ -176,8 +179,17 @@ public static WebElement get_leadIDCreated ;
 	public static WebElement get_comntactId2amlcheck;
     
     
+    @FindBy(xpath="//i[@title='Import Relationship Method MDM']")
+    public static WebElement clk_importbutton ;
+    
     
 
+    @FindBy(name="m$c$uf")
+    public static WebElement clk_choosefile ;
+    
+
+    @FindBy(name="m$bs$bf")
+    public static WebElement clk_finish; 
 
 
 

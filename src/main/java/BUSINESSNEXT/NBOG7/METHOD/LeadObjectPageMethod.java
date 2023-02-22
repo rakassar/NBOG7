@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import BUSINESSNEXT.NBOG7.OBJECT.*;
 
 
+
 public class LeadObjectPageMethod extends HomePageMethod{
 
    public static String leadid;
@@ -117,27 +118,27 @@ public class LeadObjectPageMethod extends HomePageMethod{
 public void ApprovedbyAuthorizerBtn()
 {
 	LeadObjectPageObject.clk_ldApprovedbyAuthorizerBtn.click();
-  
+	System.out.println("Approved by Authorizer!");
 
    }
 
 public void SendtoAuthorizerBtn()
 {
 	LeadObjectPageObject.clk_ldSendtoAuthorizerBtn.click();
-  
+    System.out.println("Send to Authorizer Done by Checker!");
 
    }
 public void approvedByComplianceMaker()
 {
 	LeadObjectPageObject.clk_ldComplianceMakerBtn.click();
   
-
+	System.out.println("Approved By ComplianceMaker!");
    }
 
 public void approvedByComplianceChecker()
 {
 	LeadObjectPageObject.clk_ldComplianceCheckerBtn.click();
-  
+	System.out.println("Approved By ComplianceChecker!");
 
    }
 
@@ -393,7 +394,7 @@ public void VerifiedbyCheckerBtn()
 		 * js.executeScript("window.scrollBy(0,250)", "");
 		 *///driver.switchTo( ).alert( ).dismiss();
 	   LeadObjectPageObject.btn_VerifiedbyChecker.click();
-
+       System.out.println("Verified by Checker Done !");
 
 }
 
@@ -418,5 +419,56 @@ public void GetAMLResponseForContacts()
 
 }
  
+
+public void SelectAllDatafromView(String Leadview) throws InterruptedException
+
+	{
+
+		    
+		    leadview(Leadview);
+		    LeadObjectPageObject.clk_arrorw.click();
+		    Thread.sleep(1000);
+		    LeadObjectPageObject.sel_alldata.click();
+			Thread.sleep(1000);
+			LeadObjectPageObject.clk_importbutton.click();
+		    Thread.sleep(3000);
+			LeadObjectPageObject.clk_closeProcessApplicationPopup.click();
+
+		    Thread.sleep(1000);
+	}
+
+public void clk_importButton() throws InterruptedException
+
+{
+
+    Thread.sleep(1000);
+	LeadObjectPageObject.clk_importbutton.click();
+    Thread.sleep(1000);
+}
+
+
+
+
+
+public void choosefileandfinish() throws InterruptedException
+
+{
+	
+    Set<String> multiplewindows=driver.getWindowHandles();
+    Iterator<String> iterator = multiplewindows.iterator();
+    String mainWindow = iterator.next();
+    System.out.println("Main Window"+mainWindow);
+    String ChildWindow = iterator.next();
+    System.out.println("Child Window"+ ChildWindow);
+    driver.switchTo().window(ChildWindow);
+   // CustomerSearchPageObject.clk_CustomerServiceJourney.click();
+    Thread.sleep(1000);
+    LeadObjectPageObject.clk_choosefile.sendKeys("C:\\Users\\Rizwan Ahmad\\Desktop\\NBO\\MDM_Import\\Sourcingfile.csv");
+    Thread.sleep(500);
+    LeadObjectPageObject.clk_finish.click();
+    Thread.sleep(125000);
+    driver.switchTo().window(mainWindow);
+}
+
 
 }
