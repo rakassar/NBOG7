@@ -18,6 +18,8 @@ public class TestDataFromExcel implements Properties {
 	public static String Authorizer ;
 	public static String ComplianceMaker	;
 	public static String ComplianceChecker;
+	public static String admin;
+	
 	
 
 
@@ -41,6 +43,7 @@ Checker=sheet.getRow(2).getCell(1).getStringCellValue();
 Authorizer=sheet.getRow(3).getCell(1).getStringCellValue();
 ComplianceMaker=sheet.getRow(4).getCell(1).getStringCellValue();
 ComplianceChecker=sheet.getRow(5).getCell(1).getStringCellValue();
+admin=sheet.getRow(6).getCell(1).getStringCellValue();
 
 
 Row row1 = sheet.getRow(1);

@@ -32,7 +32,6 @@ public static WebElement ent_ldcustomerName;
 @FindBy(name="cust_44")
 public static WebElement ent_ldcompanyName;
 
-
 @FindBy(xpath="//input[@data-autoid = 'cust_580_ctrl']")
 public static WebElement ent_ldDateofBirth;
 
@@ -57,6 +56,10 @@ public static WebElement ent_ldPassportExpiry;
 @FindBy(xpath="//input[@data-autoid = 'cust_440_ctrl']")
 public static WebElement ent_ldvisaExpiry;
 
+@FindBy(xpath="//span[@data-autoid ='cust_112343_ctrl']")
+public static WebElement get_riskcategory;
+
+
 @FindBy(name="cust_583")
 public static WebElement sel_ldEmployerType;
 
@@ -69,12 +72,19 @@ public static WebElement pic_ldAnalysisCode;
 @FindBy(name="cust_1801")
 public static WebElement pic_ldSub_Industry;
 
+@FindBy(name="cust_1800")
+public static WebElement pic_ldIndustry;
+
 
 @FindBy(name="cust_1421")
 public static WebElement sel_ldEntityType1;
 
 @FindBy(name="cust_112473")
 public static WebElement pic_ldNatureOfBusiness;
+
+@FindBy(name="cust_1799")
+public static WebElement pic_IndustrySector;
+
 
 @FindBy(name="cust_592")
 public static WebElement pic_ldCustomerProfession;
@@ -432,7 +442,7 @@ public static WebElement sel_ldIntstInHighRiskIndustry;
 public static WebElement sel_ldBusinessInHighRisk;
 
 @FindBy(name="cust_124641")
-public static WebElement sel_ldManagaedByNaturalPerson;
+public static WebElement sel_Sendmoneytocountry;
 
 @FindBy(name="cust_124643")
 public static WebElement sel_ldIES;
@@ -703,6 +713,11 @@ public static WebElement sel_ldOccupation;
 public static WebElement sel_ldOtherOccupation;
 @FindBy(name="cust_2353")
 public static WebElement sel_ldForEmployment;
+
+@FindBy(xpath="//input[contains(@data-autoid,'cust_625_ctrl')]")
+public static WebElement ent_otherincome;
+
+
 @FindBy(name="cust_86")
 public static WebElement ent_ldTin;
 @FindBy(name="cust_48")
@@ -832,4 +847,13 @@ public static WebElement clk_CRRSCBtnNonIndi;
 
 @FindBy(name="cust_1516")
 public static WebElement sel_ldperaddaspreaddNonIndi;
+
+
+@FindBy(xpath="//span[@data-autoid= 'LE_STATUSCODE_ctrl']")
+public static WebElement get_leadStatusCode;
+
+
+@FindBy(xpath="//span[normalize-space()='Next']")
+public static WebElement clk_Next ;
+
 }

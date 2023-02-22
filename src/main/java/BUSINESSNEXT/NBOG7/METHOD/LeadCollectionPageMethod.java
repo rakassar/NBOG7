@@ -17,6 +17,8 @@ public class LeadCollectionPageMethod extends HomePageMethod{
 	String SDmobilenumber;
 	public static String leadid;
 	public static String Employeetype;
+	public static String Leadstatus;
+	public static String riskcategory;
 
 //************************Fill the Info for new lead process*****************************-------------//
 //NBO
@@ -126,11 +128,12 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		IDCardExpiry();
 	}
 	
-	 public void EmployerType(String type)
+	 public void EmployerType(String type) throws InterruptedException
 	    {
 	    	Select sel=new Select(LeadCollectionPageObject.sel_ldEmployerType);
 	    	//sel.selectByValue(Product);
 	    	sel.selectByVisibleText(type);
+	    	Thread.sleep(1000);
 	    }
 	 public void dateOfRegistration(String type)
 	    {
@@ -168,6 +171,18 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 			clients.sendKeys(Keys.ENTER);
 			}
 	 
+	 public void Industry(String Industry) throws InterruptedException
+	    {
+	    	WebElement clients= LeadCollectionPageObject.pic_ldIndustry;
+	    	clients.sendKeys(Industry);
+			Thread.sleep(1000);
+			clients.sendKeys(Keys.ARROW_DOWN);
+			Thread.sleep(500);
+			clients.sendKeys(Keys.ENTER);
+			}
+	 
+	 
+	 
 	 public void NatureOfBusiness(String salesID) throws InterruptedException
 	    {
 	    	WebElement clients= LeadCollectionPageObject.pic_ldNatureOfBusiness;
@@ -177,6 +192,18 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 			Thread.sleep(500);
 			clients.sendKeys(Keys.ENTER);
 			}
+	 
+	 public void IndustrySector(String IndustrySec) throws InterruptedException
+	    {
+	    	WebElement clients= LeadCollectionPageObject.pic_IndustrySector;
+	    	clients.sendKeys(IndustrySec);
+			Thread.sleep(1000);
+			clients.sendKeys(Keys.ARROW_DOWN);
+			Thread.sleep(500);
+			clients.sendKeys(Keys.ENTER);
+			}
+	 
+	 
 	 public void subIndustry(String salesID) throws InterruptedException
 	    {
 	    	WebElement clients= LeadCollectionPageObject.pic_ldCustomerProfession;
@@ -216,6 +243,14 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 
 			    LeadCollectionPageObject.ent_AccountShortName.sendKeys(name);
 			    }
+	 
+	 
+	 public void otherincome(String name)
+		{
+
+			    LeadCollectionPageObject.ent_otherincome.sendKeys(name);
+			    }
+	 
 	 
 	 public void shortName(String name)
 		{
@@ -410,6 +445,10 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 LeadCollectionPageObject.clk_ldOriginCountry1name.click();
 		 Thread.sleep(1000);
 	 }
+	 
+	 
+
+
 	 
 	 public void HNWIStatus(String type)
 	    {
@@ -616,9 +655,10 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 			clients.sendKeys(Keys.ENTER);
 			}
 	 public void ResidenceCountry(String salesID) throws InterruptedException
-	    {			Thread.sleep(500);
-
-	    	WebElement clients= LeadCollectionPageObject.SEL_ldResidenceCountry;
+	    {			
+		 
+		    Thread.sleep(1000);
+		    WebElement clients= LeadCollectionPageObject.SEL_ldResidenceCountry;
 	    	clients.sendKeys(salesID);
 			Thread.sleep(1000);
 			clients.sendKeys(Keys.ARROW_DOWN);
@@ -640,6 +680,38 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 	    }
 	 
 	 
+	 public void getStatusCode() 
+	 
+	 {
+		    Leadstatus=LeadCollectionPageObject.get_leadStatusCode.getText();
+		    System.out.println("Lead Status is: "+Leadstatus);
+		    
+		
+	   }
+	 
+	 
+     public void getriskcategory() 
+	 
+	 {
+	
+	        riskcategory=LeadCollectionPageObject.get_riskcategory.getText();
+		    System.out.println("Risk Category is: "+riskcategory);
+		    
+		
+	   }
+
+	 
+	   public void waitTillNextStatusCode(String nextstatuscode) throws InterruptedException {
+		  do{
+			  //Refresh();
+			  wait();
+			 // Thread.sleep(1500);
+			  
+		  }   while(Leadstatus.equalsIgnoreCase(nextstatuscode));
+		  
+	   }
+	  
+	   
 	 public void USTax(String type)
 	    {
 	    	Select sel=new Select(LeadCollectionPageObject.sel_ldUSTax);
@@ -667,6 +739,16 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
            Thread.sleep(1000);
 		 LeadCollectionPageObject.clk_saveandproceed.click();
 	 	}
+	 
+	 
+	 public void clickknext() throws InterruptedException
+
+	 	{
+	 	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+        Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_Next.click();
+	 	}
+	 
 	 
 	 
 //high risk form
@@ -937,6 +1019,12 @@ public void AttachProofClick() throws InterruptedException {
 	    	sel.selectByVisibleText(type);
 	    }
 	 
+	 
+	 public void Sendmoneytocountry(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_Sendmoneytocountry);
+	    	sel.selectByVisibleText(type);
+	    }
 	 public void ManagaedByNaturalPerson(String type)
 	    {
 	    	Select sel=new Select(LeadCollectionPageObject.sel_ldRCVOrSndMoney);
@@ -1815,7 +1903,7 @@ public void AttachProofClick() throws InterruptedException {
 		    }
 
 
-              public void clickClosePopup()
+              public void NotificationPOPUPClose()
 
 
 		    {

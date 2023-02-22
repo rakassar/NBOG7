@@ -44,6 +44,10 @@ public static WebElement get_leadIDCreated ;
 		@FindBy(xpath="//span[normalize-space()='AML Verification']")
 		public static WebElement clk_ldAMLBtn;
 
+		
+		@FindBy(xpath="//span[normalize-space()='Verified by Checker']")
+		public static WebElement btn_VerifiedbyChecker;
+		
 		@FindBy(xpath="//span[normalize-space()='Approved by Authorizer']")
 		public static WebElement clk_ldApprovedbyAuthorizerBtn;
 
@@ -65,6 +69,9 @@ public static WebElement get_leadIDCreated ;
 
 		@FindBy(xpath="//span[@title = 'NMDD']")
 		 public static WebElement clk_NMDDtab ;
+		
+		@FindBy(xpath="//span[@title='Details (Corporate)']")
+		 public static WebElement clk_DetailsCoporate ;
 		
 		@FindBy(xpath="(//span[@class ='acd-link-text'])[6]")
 		 public static WebElement clk_closeContact1 ;
@@ -92,6 +99,9 @@ public static WebElement get_leadIDCreated ;
 	     @FindBy(xpath="//label[@for='checkbox0']")
 	     public static WebElement clk_selectlead ;
 
+	     @FindBy(css="#select-all-checkbox")
+	     public static WebElement sel_alldata ;
+	     
 	     @FindBy(css="[data-autoid='LeadID_0']")
 	     public static WebElement clk_selectthelead ;
 
@@ -149,11 +159,37 @@ public static WebElement get_leadIDCreated ;
 	public static WebElement clk_BmComments;
     
   //Trust Ops convert lead
-    @FindBy(xpath="//span[normalize-space()='Convert Lead']")
-	public static WebElement clk_TustOpsConvertLead;
+    @FindBy(css="span[data-autoid='cust_110001_ctrl']")
+	public static WebElement txt_AML_Check;
+    
+    //Contacts IDs
+    @FindBy(xpath="//span//div[@data-autoid='ContactID_0']")
+	public static WebElement get_comntactId1;
+    //Contacts IDs
+    @FindBy(xpath="//span//div[@data-autoid='ContactID_1']")
+	public static WebElement get_comntactId2;
+    
+    
+  //Contacts IDs
+    @FindBy(xpath="//span//div[@data-autoid='Con_ex2_88_0']")
+	public static WebElement get_comntactId1amlcheck;
+    
+  //Contacts IDs
+    @FindBy(xpath="//span//div[@data-autoid='Con_ex2_88_1']")
+	public static WebElement get_comntactId2amlcheck;
+    
+    
+    @FindBy(xpath="//i[@title='Import Relationship Method MDM']")
+    public static WebElement clk_importbutton ;
     
     
 
+    @FindBy(name="m$c$uf")
+    public static WebElement clk_choosefile ;
+    
+
+    @FindBy(name="m$bs$bf")
+    public static WebElement clk_finish; 
 
 
 

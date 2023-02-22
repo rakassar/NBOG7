@@ -16,6 +16,10 @@ public class HomePageObject extends LoginPageObject {
      @FindBy(className="icon-obj6")
 	 public static WebElement clk_leadpanesaleswidget ;
 
+ 	//---create lead
+     //@FindBy(xpath="//span[@title='CRAM Model Management']")
+    @FindBy(xpath="//i[@class='icon icon-newtab']")
+	 public static WebElement clk_mdmswidget ;
    
 
      @FindBy(xpath="//span[text()='Loan Journey']")
@@ -70,6 +74,12 @@ public class HomePageObject extends LoginPageObject {
 
      @FindBy(xpath="//*[@id=\"QuickLinksDiv\"]/ul/li[5]/a")
   	 public static WebElement clk_leadpaneCasejourney ;
-
+    
+     
+   //---mdm
+     //@FindBy(xpath="//span[@title='CRAM Model Management']")
+    @FindBy(css="span[title='Relationship Method']")
+	 public static WebElement clk_mdmrelationshipmethod ;
+   
 
     }

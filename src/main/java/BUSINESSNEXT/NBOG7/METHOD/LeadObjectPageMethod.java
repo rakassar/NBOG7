@@ -9,9 +9,16 @@ import org.openqa.selenium.support.ui.Select;
 import BUSINESSNEXT.NBOG7.OBJECT.*;
 
 
+
 public class LeadObjectPageMethod extends HomePageMethod{
 
    public static String leadid;
+   public static String AmlCheckvalue;
+   public static String contactid1;
+   public static String contactid2;
+   public static String contactid1amlcheck;
+   public static String contactid2amlcheck;
+   
    
    public void GetLeadId()
 	  {
@@ -111,27 +118,27 @@ public class LeadObjectPageMethod extends HomePageMethod{
 public void ApprovedbyAuthorizerBtn()
 {
 	LeadObjectPageObject.clk_ldApprovedbyAuthorizerBtn.click();
-  
+	System.out.println("Approved by Authorizer!");
 
    }
 
 public void SendtoAuthorizerBtn()
 {
 	LeadObjectPageObject.clk_ldSendtoAuthorizerBtn.click();
-  
+    System.out.println("Send to Authorizer Done by Checker!");
 
    }
 public void approvedByComplianceMaker()
 {
 	LeadObjectPageObject.clk_ldComplianceMakerBtn.click();
   
-
+	System.out.println("Approved By ComplianceMaker!");
    }
 
 public void approvedByComplianceChecker()
 {
 	LeadObjectPageObject.clk_ldComplianceCheckerBtn.click();
-  
+	System.out.println("Approved By ComplianceChecker!");
 
    }
 
@@ -154,6 +161,13 @@ public void clickGenerateCIFButton()
 
 	{
 	   LeadObjectPageObject.clk_NMDDtab.click();
+
+	}
+   
+   public void DetailsCorporate()
+
+	{
+	   LeadObjectPageObject.clk_DetailsCoporate.click();
 
 	}
    
@@ -220,15 +234,7 @@ public void ClickOnActivitiestab()
 	   LeadObjectPageObject.clk_BmApproveBttn.click();
 	   Thread.sleep(1000);
 	}
-   public void TustOpsConvertLeadCLK() throws InterruptedException
-
-	{
-	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
-
-	   LeadObjectPageObject.clk_TustOpsConvertLead.click();
-	   Thread.sleep(1000);
-	}
-
+  
 
 
    public void SwitchToSecondaryWindow()
@@ -278,7 +284,7 @@ public void ClickOnActivitiestab()
    	sel1.selectByVisibleText(popupdt360);
    }
 
-   public void ProcessApplicationPopUpClose()
+   public void RecordupdatePopUpConfirmation()
 
 	{
 	   //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
@@ -287,22 +293,6 @@ public void ClickOnActivitiestab()
 
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -384,5 +374,101 @@ public void ClickOnOnBoardingJourneyNonIndi()
 	driver.findElements(By.id("1")).get(2).click();
   // LeadObjectPageObject.clk_salesonbaordingjourney.get(2).click();;
 }
+
+
+public void ClickAMLResponse()
+
+{
+	AmlCheckvalue=LeadObjectPageObject.txt_AML_Check.getText();
+	System.out.println(AmlCheckvalue);
+	
+}
+
+
+public void VerifiedbyCheckerBtn()
+
+
+{
+		/*
+		 * JavascriptExecutor js = (JavascriptExecutor) driver;
+		 * js.executeScript("window.scrollBy(0,250)", "");
+		 *///driver.switchTo( ).alert( ).dismiss();
+	   LeadObjectPageObject.btn_VerifiedbyChecker.click();
+       System.out.println("Verified by Checker Done !");
+
+}
+
+
+public void GetContactIds()
+
+	{
+	   contactid1=LeadObjectPageObject.get_comntactId1.getText();
+	   contactid2=LeadObjectPageObject.get_comntactId2.getText();
+	   System.out.println("ContactId1:"+contactid1);
+	   System.out.println("ContactId2:"+contactid2);
+
+	}
+
+public void GetAMLResponseForContacts()
+
+{
+	contactid1amlcheck=LeadObjectPageObject.get_comntactId1amlcheck.getText();
+	contactid2amlcheck=LeadObjectPageObject.get_comntactId2amlcheck.getText();
+   System.out.println("ContactId1:"+contactid1amlcheck);
+   System.out.println("ContactId2:"+contactid2amlcheck);
+
+}
+ 
+
+public void SelectAllDatafromView(String Leadview) throws InterruptedException
+
+	{
+
+		    
+		    leadview(Leadview);
+		    LeadObjectPageObject.clk_arrorw.click();
+		    Thread.sleep(1000);
+		    LeadObjectPageObject.sel_alldata.click();
+			Thread.sleep(1000);
+			LeadObjectPageObject.clk_importbutton.click();
+		    Thread.sleep(3000);
+			LeadObjectPageObject.clk_closeProcessApplicationPopup.click();
+
+		    Thread.sleep(1000);
+	}
+
+public void clk_importButton() throws InterruptedException
+
+{
+
+    Thread.sleep(1000);
+	LeadObjectPageObject.clk_importbutton.click();
+    Thread.sleep(1000);
+}
+
+
+
+
+
+public void choosefileandfinish() throws InterruptedException
+
+{
+	
+    Set<String> multiplewindows=driver.getWindowHandles();
+    Iterator<String> iterator = multiplewindows.iterator();
+    String mainWindow = iterator.next();
+    System.out.println("Main Window"+mainWindow);
+    String ChildWindow = iterator.next();
+    System.out.println("Child Window"+ ChildWindow);
+    driver.switchTo().window(ChildWindow);
+   // CustomerSearchPageObject.clk_CustomerServiceJourney.click();
+    Thread.sleep(1000);
+    LeadObjectPageObject.clk_choosefile.sendKeys("C:\\Users\\Rizwan Ahmad\\Desktop\\NBO\\MDM_Import\\Sourcingfile.csv");
+    Thread.sleep(500);
+    LeadObjectPageObject.clk_finish.click();
+    Thread.sleep(125000);
+    driver.switchTo().window(mainWindow);
+}
+
 
 }
