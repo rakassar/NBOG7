@@ -37,18 +37,18 @@ public class SC_016_Lead_CorporateKYC extends HomePageMethod {
 
 		launchBrowser();
 		Thread.sleep(1000);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		TestDataFromExcel.DataRead();
 		Thread.sleep(500);
 		EnterUserName(TestDataFromExcel.SSO);
 		EnterPassword(TestDataFromExcel.Password);
 		Thread.sleep(500);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		LoginButtonClick();
 		Thread.sleep(1000);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		CheckRole();
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 
 		ClickOnLeadswidget();
 		Thread.sleep(1000);
@@ -56,63 +56,64 @@ public class SC_016_Lead_CorporateKYC extends HomePageMethod {
 		lopm.leadview("Account Opened");
 		lopm.onMyBucketlead();
 
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		CLDLPM.NotificationPOPUPClose();
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		lopm.goToCustomer360();
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollToBottom();
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 
 		lopm.clickCorporateKYCButton();
 		lopm.SwitchToSecondaryWindow();
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		lopm.ClickOnCorporateOnboarding();
 		lopm.SwitchToParentWindow();
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		CLDLPM.TRNRegistrationDate("24/02/2023");
 
-		CLDLPM.wishToUpdateInfo("No");
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
-		CLDLPM.DateOfJoining("24/02/2023");
+		CLDLPM.lengthOfRelationshipWithBank();
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
+		
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 
 		// CLDLPM.customerSegment("Private");
 
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		CLDLPM.CashTransactions("No");
 		CLDLPM.CustomerIsInLineWithProfile("No");
 		CLDLPM.PrformedOnCustomer("No");
 		CLDLPM.AssociatedWithCustomer("No");
-		CLDLPM.UtilizedForCmmrcialActivity("No");
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		CLDLPM.MajorCreditsInAccount("No");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		CLDLPM.saveAndProceed();
 		// CLDLPM.getStatusCode();
 
@@ -121,37 +122,37 @@ public class SC_016_Lead_CorporateKYC extends HomePageMethod {
 	@Test(priority = 2)
 	public void SC_001_TC_002() throws Exception {
 
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		
 		Thread.sleep(200);
 		
 		scrollBy();
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		CLDLPM.existingHighValueIndividuals("No");
 		CLDLPM.updateFATCAInfo("No");
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 
 		CLDLPM.saveAndProceed();
 		
 		
 		
 		Thread.sleep(5000);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(3000);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(1000);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		// scrollBy();
 		// CLDLPM.waitTillNextStatusCode("Verification Pending");
 
@@ -160,55 +161,55 @@ public class SC_016_Lead_CorporateKYC extends HomePageMethod {
 	@Test(priority = 3)
 	public void SC_001_TC_003() throws Exception {
 		Thread.sleep(1000);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		CLDLPM.saveAndProceed();
 		Thread.sleep(6000);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
 		CLDLPM.saveAndProceed();
 		Thread.sleep(5000);
 
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
-		screen.ScreenshotMethod("SC_015_Lead_RetailKYC-");
+		screen.ScreenshotMethod("SC_016_Lead_CorporateKYC-");
 		scrollBy();
 		Thread.sleep(200);
 	

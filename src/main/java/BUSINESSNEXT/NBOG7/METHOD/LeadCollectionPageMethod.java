@@ -922,6 +922,13 @@ LeadCollectionPageObject.ent_ldldCardNo.sendKeys(mnumbername);
 		 LeadCollectionPageObject.clk_ldIssuingCountry.click();
 	 }
 	 
+	 public void lengthOfRelationshipWithBank() throws InterruptedException {
+		 LeadCollectionPageObject.pic_LOSpicker.click();
+		
+		 Thread.sleep(1000);
+		 LeadCollectionPageObject.clk_ldScreeningvalueselect.click();
+	 }
+	 
 	 
 	 public void EmploymentType(String type)
 	    {
@@ -1191,6 +1198,11 @@ public void AttachProofClick() throws InterruptedException {
 	    	sel.selectByVisibleText(type);
 	    }
 	 
+	 public void MajorCreditsInAccount(String type)
+	    {
+	    	Select sel=new Select(LeadCollectionPageObject.sel_ldMajorCreditsInAccount);
+	    	sel.selectByVisibleText(type);
+	    }
 	 
 	 public void dateOfCRS(String date)
 		{

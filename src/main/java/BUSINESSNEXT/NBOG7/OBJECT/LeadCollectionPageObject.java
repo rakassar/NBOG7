@@ -111,6 +111,10 @@ public static WebElement clk_PSpicker;
 public static WebElement ent_ldPSsearchBox;
 
 
+@FindBy(xpath="//a[@data-autoid='cust_124943_srch']")
+public static WebElement pic_LOSpicker;
+
+
 @FindBy(name="cust_125817")
 public static WebElement ent_wishToUpdateInfo;
 
@@ -169,7 +173,7 @@ public static WebElement clk_screeningMatchespickerCorporate;
 @FindBy(xpath="//a[@data-autoid='cust_122989_srch']")
 public static WebElement clk_ldCountryofOperationspicker;
 
-@FindBy(xpath="//div[@data-autoid='Value_0']")
+@FindBy(xpath="//div[@data-autoid='value_0']")
 public static WebElement clk_ldScreeningvalueselect;
 
 @FindBy(xpath="//div[@data-autoid='Business_Set_Up_Type_0']")
@@ -874,6 +878,9 @@ public static WebElement sel_ldAssociatedWithCustomer;
 @FindBy(name="cust_125832")
 public static WebElement sel_ldUtilizedForCmmrcialActivity;
 
+
+@FindBy(name="cust_125834")
+public static WebElement sel_ldMajorCreditsInAccount;
 
 @FindBy(xpath="//input[@data-autoid='cust_112566_ctrl']")
 public static WebElement ent_TRNRegistrationDate ;

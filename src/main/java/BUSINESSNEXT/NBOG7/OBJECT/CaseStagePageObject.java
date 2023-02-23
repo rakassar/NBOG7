@@ -47,7 +47,8 @@ public static WebElement clk_NextOnCasePage;
 @FindBy(xpath="//div[contains(@id,'newobject')]//div/span[contains(@data-autoid,'CASE_NUMBER_ctrl')]")
 public static WebElement caseIDCreated;
 
-
+@FindBy(className="icon-obj9")
+public static WebElement clk_customerServicewidget ;
 
 
 @FindBy(className="icon-service")
@@ -88,7 +89,7 @@ public static WebElement Slk_caseID ;
 @FindBy(xpath="//label[@for='checkbox0']")
 public static WebElement clk_selectcase ;
 
-@FindBy(xpath="//i[@title='Self Assign Cases']")
+@FindBy(xpath="//i[@title='Self Assign']")
 public static WebElement clk_selfassigncase ;
 
 @FindBy(xpath="//button[normalize-space()='Ok']")

@@ -55,16 +55,14 @@ public class CaseStagePageMethod extends HomePageMethod {
 	  }
 
 
-	 public void clk_caseobject() throws InterruptedException
+	 public void clk_caseobject(String bucket) throws InterruptedException
 
 		{
 
-			   Actions quick1 = new Actions(driver);
-			   quick1.moveToElement(CaseStagePageObject.clk_Casequicklink).perform();
-			   Thread.sleep(3000);
-			   CaseStagePageObject.clk_Caseobject.click();
+			 
+			   CaseStagePageObject.clk_customerServicewidget.click();
 		       Select bucket2 = new Select(CaseStagePageObject.clk_caseobject3);
-		       bucket2.selectByVisibleText("Case");
+		       bucket2.selectByVisibleText(bucket);
 		       //CaseStagePageObject.clk_caseobject4.click();
 		}
 

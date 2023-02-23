@@ -61,6 +61,8 @@ public class LeadObjectPageMethod extends HomePageMethod{
 
 		    Thread.sleep(1000);
 	}
+   
+   
 
 
 		    public void leadview(String leadview) throws InterruptedException
@@ -139,6 +141,13 @@ public void approvedByComplianceChecker()
 {
 	LeadObjectPageObject.clk_ldComplianceCheckerBtn.click();
 	System.out.println("Approved By ComplianceChecker!");
+
+   }
+
+public void clickApproveButton()
+{
+	LeadObjectPageObject.clk_ApproveBttn.click();
+	
 
    }
 

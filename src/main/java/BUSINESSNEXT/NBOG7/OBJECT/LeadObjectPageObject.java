@@ -158,6 +158,11 @@ public static WebElement get_leadIDCreated ;
     //BM  approve button
     @FindBy(xpath="//span[normalize-space()='Approved']")
 	public static WebElement clk_BmApproveBttn;
+    
+    @FindBy(xpath="//span[normalize-space()='Approve']")
+	public static WebElement clk_ApproveBttn;
+    
+    
   
     
   //BM  comments box button

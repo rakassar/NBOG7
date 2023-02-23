@@ -15,6 +15,8 @@ public class HomePageObject extends LoginPageObject {
 	//---create lead
      @FindBy(className="icon-obj6")
 	 public static WebElement clk_leadpanesaleswidget ;
+     
+    
 
  	//---create lead
      //@FindBy(xpath="//span[@title='CRAM Model Management']")

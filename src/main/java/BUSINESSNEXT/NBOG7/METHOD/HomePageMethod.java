@@ -17,6 +17,8 @@ public class HomePageMethod extends LoginPageMethod{
 	HomePageObject.clk_leadpanesaleswidget.click();;
 
 	}
+   
+  
 
    
    public void ClickMDMWidget() throws InterruptedException
@@ -43,6 +45,10 @@ public class HomePageMethod extends LoginPageMethod{
 	       //CaseStagePageObject.clk_caseobject4.click();
 	}
 
+   public void scrollToTop() {
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
+		//actions.sendKeys(keys.END).build().perform();
+	}
 
 
 
